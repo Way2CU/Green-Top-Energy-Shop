@@ -10,7 +10,17 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<!-- Header -->
+			<cms:template file="stock/header_generic.xml">
+				<param name="logo" value="_BASEURL.'/site/images/logo.svg'" cms:eval="value"/>
+				<param name="menu" value="parts/main_menu.xml"/>
+				<param name="phone" value="phone_number"/>
+			</cms:template>
+
+			<!-- Footer -->
+			<footer>
+				<cms:template file="stock/copyright.xml"/>
+			</footer>
 		</body>
 	</html>
 </document>
