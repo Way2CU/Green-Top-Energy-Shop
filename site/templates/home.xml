@@ -18,9 +18,7 @@
 			</cms:template>
 
 			<!-- Footer -->
-			<footer>
-				<cms:template file="stock/copyright.xml"/>
-			</footer>
+			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>
 </document>
