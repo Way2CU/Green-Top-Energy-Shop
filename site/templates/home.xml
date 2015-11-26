@@ -12,7 +12,7 @@
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<!-- Header -->
 			<cms:template file="stock/header_generic.xml">
-				<param name="logo" value="_BASEURL.'/site/images/logo.svg'" cms:eval="value"/>
+				<param name="logo" value="logo.svg"/>
 				<param name="menu" value="parts/main_menu.xml"/>
 				<param name="phone" value="phone_number"/>
 			</cms:template>
