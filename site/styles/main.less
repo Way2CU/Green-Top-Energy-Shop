@@ -7,6 +7,18 @@
  */
 
 
+@color_ac_blue: #2a4191;
+@color_ac_green: #51ae43;
+@color_ac_orange: #ea7a06;
+@color_ac_red: #ca2424;
+@color_ac_text: white;
+
+@color_features: #34495e;
+@color_features_text: white;
+@color_header: #1e477a;
+@color_special: #5cc3d9;
+@color_text: #7f8c8d;
+
 @import "header.less";
 @import "content.less";
 @import "footer.less";
@@ -14,5 +26,26 @@
 
 body {
 	background-color: white;
-	color: black;
+	color: @color_text;
+
+	font-family: Ubuntu;
+	font-weight: 400;
+}
+
+input,
+select,
+textarea,
+button {
+	font-family: Ubuntu;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: @color_default_header;
+	font-family: Ultra;
+	font-weight: 400;
 }
