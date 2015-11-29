@@ -67,6 +67,8 @@
 				>
 				<cms:text constant="menu_about_us"/>
 			</a>
+
+			<cms:template file="parts/policy_menu.xml"/>
 		</li>
 		<li>
 			<a

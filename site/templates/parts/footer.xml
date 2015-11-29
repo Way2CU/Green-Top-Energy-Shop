@@ -3,11 +3,34 @@
 <document>
 	<footer>
 		<div class="menu">
+			<!-- Centered logo -->
 			<img
 				src="site/images/logo.svg"
 				alt="site_title"
 				cms:constant="alt"
 				/>
+
+			<!-- Plans menu -->
+			<nav id="plans">
+			</nav>
+
+			<!-- Phone number -->
+			<a
+				class="phone"
+				href="'tel:'.urlencode(Language::getText($template['phone']))"
+				cms:eval="href"
+				>
+				<svg>
+					<use
+						href="#icon-phone"
+						xlink:href="site/images/site-sprite.svg#icon-phone"
+						/>
+				</svg>
+				<cms:text constant="$template['phone']" cms:eval="constant"/>
+			</a>
+
+			<!-- Policy menu -->
+			<cms:template file="parts/policy_menu.xml"/>
 		</div>
 
 		<div>

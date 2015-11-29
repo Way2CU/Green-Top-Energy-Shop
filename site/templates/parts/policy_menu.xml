@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<ul>
+		<li>
+			<a
+				href="url_Make('warranty-agreement', 'about-us')"
+				cms:eval="href"
+				>
+				<cms:text constant="menu_warranty_agreement"/>
+			</a>
+		</li>
+		<li>
+			<a
+				href="url_Make('shipping-policy', 'about-us')"
+				cms:eval="href"
+				>
+				<cms:text constant="menu_shipping_policy"/>
+			</a>
+		</li>
+		<li>
+			<a
+				href="url_Make('return-policy', 'about-us')"
+				cms:eval="href"
+				>
+				<cms:text constant="menu_return_policy"/>
+			</a>
+		</li>
+	</ul>
+</document>

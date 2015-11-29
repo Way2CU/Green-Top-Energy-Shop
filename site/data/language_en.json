@@ -10,5 +10,8 @@
 	"menu_blog": "Blog",
 	"menu_about_us": "About us",
 	"menu_contact_us": "Contact us",
-	"menu_login": "Login"
+	"menu_login": "Login",
+	"menu_warranty_agreement": "Warranty agreement",
+	"menu_shipping_policy": "Shipping policy",
+	"menu_return_policy": "Return policy"
 }
