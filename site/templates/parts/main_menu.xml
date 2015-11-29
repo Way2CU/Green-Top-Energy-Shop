@@ -1,0 +1,66 @@
+<document>
+	<a
+		class="$section == 'packages' ? 'active' : false"
+		href="url_Make('', 'packages')"
+		cms:eval="href"
+		cms:optional="class"
+		>
+		<cms:text constant="menu_packages"/>
+	</a>
+	<a
+		class="$section == 'eGauge' ? 'active' : false"
+		href="url_Make('', 'eGauge')"
+		cms:eval="href"
+		cms:optional="class"
+		>
+		<cms:text constant="menu_eGauge"/>
+	</a>
+	<a
+		class="$section == 'documentation' ? 'active' : false"
+		href="url_Make('', 'documentation')"
+		cms:eval="href"
+		cms:optional="class"
+		>
+		<cms:text constant="menu_documentation"/>
+	</a>
+	<a
+		class="$section == 'videos' ? 'active' : false"
+		href="url_Make('', 'videos')"
+		cms:eval="href"
+		cms:optional="class"
+		>
+		<cms:text constant="menu_videos"/>
+	</a>
+	<a
+		class="$section == 'blog' ? 'active' : false"
+		href="url_Make('', 'blog')"
+		cms:eval="href"
+		cms:optional="class"
+		>
+		<cms:text constant="menu_blog"/>
+	</a>
+	<a
+		class="$section == 'about' ? 'active' : false"
+		href="url_Make('', 'about')"
+		cms:eval="href"
+		cms:optional="class"
+		>
+		<cms:text constant="menu_about"/>
+	</a>
+	<a
+		class="$section == 'contact' ? 'active' : false"
+		href="url_Make('', 'contact')"
+		cms:eval="href"
+		cms:optional="class"
+		>
+		<cms:text constant="menu_contact"/>
+	</a>
+	<a
+		class="$section == 'login' ? 'active' : false"
+		href="url_Make('', 'login')"
+		cms:eval="href"
+		cms:optional="class"
+		>
+		<cms:text constant="menu_login"/>
+	</a>
+</document>
