@@ -20,8 +20,8 @@
 		</li>
 		<li>
 			<a
-				class="$section == 'egauge' ? 'active' : false"
-				href="url_Make('', 'egauge')"
+				class="$action == 'eguage' ? 'active' : false"
+				href="url_Make('egauge', 'documentation')"
 				cms:eval="href"
 				cms:optional="class"
 				>
@@ -70,8 +70,8 @@
 		</li>
 		<li>
 			<a
-				class="$section == 'contact' ? 'active' : false"
-				href="url_Make('', 'contact')"
+				class="$action == 'contact' ? 'active' : false"
+				href="url_Make('contact', 'about')"
 				cms:eval="href"
 				cms:optional="class"
 				>
