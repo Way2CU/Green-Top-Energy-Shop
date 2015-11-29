@@ -8,7 +8,7 @@
 	"menu_documentation": "Documentation",
 	"menu_videos": "Videos",
 	"menu_blog": "Blog",
-	"menu_about": "About us",
-	"menu_contact": "Contact us",
-	"menu_login": "Customer login"
+	"menu_about_us": "About us",
+	"menu_contact_us": "Contact us",
+	"menu_login": "Login"
 }
