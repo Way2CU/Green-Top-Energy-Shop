@@ -1,6 +1,6 @@
 <document>
 	<li>
-		<a href="#" data-id="$params['id']" cms:eval="data-id">
+		<a href="#">
 			<cms:var param="name" multilanguage="yes"/>
 		</a>
 	</li>
