@@ -9,8 +9,17 @@
 /**
  * Generic header
  */
+
 header.stock.generic {
 	white-space: nowrap;
+}
+
+header.stock.generic.fixed {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 100000;
 }
 
 header.stock.generic a.logo {
@@ -24,8 +33,6 @@ header.stock.generic a.logo img {
 
 header.stock.generic nav#main {
 	display: inline-block;
-	margin-left: 20px;
-	margin-right: 20px;
 }
 
 header.stock.generic a.phone {

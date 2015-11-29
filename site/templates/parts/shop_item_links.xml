@@ -1,0 +1,7 @@
+<document>
+	<li>
+		<a href="#">
+			<cms:var param="name" multilanguage="yes"/>
+		</a>
+	</li>
+</document>
