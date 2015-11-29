@@ -10,7 +10,8 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<cms:svg file="../images/site-sprite.svg"/>
+			<cms:svg file="images/site-sprite.svg"/>
+
 			<!-- Header -->
 			<cms:template file="stock/header_generic.xml">
 				<param name="fixed" value="fixed"/>
