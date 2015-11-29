@@ -22,12 +22,12 @@
 		</li>
 		<li>
 			<a
-				class="$section == 'eGauge' ? 'active' : false"
-				href="url_Make('', 'eGauge')"
+				class="$section == 'egauge' ? 'active' : false"
+				href="url_Make('', 'egauge')"
 				cms:eval="href"
 				cms:optional="class"
 				>
-				<cms:text constant="menu_eGauge"/>
+				<cms:text constant="menu_egauge"/>
 			</a>
 		</li>
 		<li>
@@ -81,20 +81,16 @@
 			</a>
 		</li>
 		<li>
-			<a
-				class="$section == 'login' ? 'active' : false"
-				href="url_Make('', 'login')"
-				cms:eval="href"
-				cms:optional="class"
-				>
-				<cms:text constant="menu_login"/>
+			<a class="login" href="#"><cms:text constant="menu_login"/>
 				<svg>
 					<use
 						href="#icon-systemicon"
 						xlink:href="site/images/site-sprite.svg#icon-systemicon"
 						/>
 				</svg>
+
 			</a>
+		
 		</li>
 	</ul>
 </document>
