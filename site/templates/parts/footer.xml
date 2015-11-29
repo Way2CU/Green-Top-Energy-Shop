@@ -12,6 +12,13 @@
 
 			<!-- Plans menu -->
 			<nav id="plans">
+				<ul>
+					<cms:module
+						name="shop"
+						action="show_item_list"
+						template="parts/shop_item_links.xml"		
+						/>
+				</ul>
 			</nav>
 
 			<!-- Phone number -->
@@ -26,11 +33,13 @@
 						xlink:href="site/images/site-sprite.svg#icon-phone"
 						/>
 				</svg>
-				<cms:text constant="$template['phone']" cms:eval="constant"/>
+				<cms:text constant="phone_number"/>
 			</a>
 
 			<!-- Policy menu -->
-			<cms:template file="parts/policy_menu.xml"/>
+			<nav id="policy">
+				<cms:template file="parts/policy_menu.xml"/>
+			</nav>
 		</div>
 
 		<div>
