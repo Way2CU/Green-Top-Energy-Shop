@@ -4,4 +4,34 @@
 	<section name="home">
 		<language name="all" file="home.xml" />
 	</section>
+	<section name="packages">
+		<language name="all">
+			<action name="_default" file="basic.xml"/>
+			<action name="basic" file="basic.xml"/>
+			<action name="_default" file="file.xml"/>
+			<action name="_default" file="file.xml"/>
+			<action name="_default" file="file.xml"/>
+		</language>
+	</section>
+	<section name="documentation">
+		<language name="all">
+			<action name="_default" file="documentation.xml"/>
+			<action name="egauge" file="e_gauge.xml"/>
+		</language>
+	</section>
+	<section name="videos">
+		<language name="all" file="videos.xml"/>
+	</section>
+	<section name="blog">
+		<language name="all">
+			<action name="_default" file="blog.xml"/>
+			<action name="view" file="blog_view.xml"/>
+		</language>
+	</section>
+	<section name="about-us">
+		<language name="all">
+			<action name="_default" file="about_us.xml"/>
+			<action name="contact" file="contact_us.xml"/>
+		</language>
+	</section>
 </document>
