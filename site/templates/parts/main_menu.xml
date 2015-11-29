@@ -8,8 +8,6 @@
 				cms:optional="class"
 				>
 				<cms:text constant="menu_packages"/>
-			
-
 			</a>
 
 			<ul>
@@ -90,7 +88,6 @@
 				</svg>
 
 			</a>
-		
 		</li>
 	</ul>
 </document>
