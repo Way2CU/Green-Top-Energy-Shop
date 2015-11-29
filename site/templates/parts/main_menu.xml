@@ -65,8 +65,10 @@
 				cms:eval="href"
 				cms:optional="class"
 				>
-				<cms:text constant="menu_about"/>
+				<cms:text constant="menu_about_us"/>
 			</a>
+
+			<cms:template file="parts/policy_menu.xml"/>
 		</li>
 		<li>
 			<a
@@ -75,15 +77,15 @@
 				cms:eval="href"
 				cms:optional="class"
 				>
-				<cms:text constant="menu_contact"/>
+				<cms:text constant="menu_contact_us"/>
 			</a>
 		</li>
 		<li>
 			<a class="login" href="#"><cms:text constant="menu_login"/>
 				<svg>
 					<use
-						href="#icon-systemicon"
-						xlink:href="site/images/site-sprite.svg#icon-systemicon"
+						href="#icon-system"
+						xlink:href="site/images/site-sprite.svg#icon-system"
 						/>
 				</svg>
 			</a>

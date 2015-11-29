@@ -10,16 +10,8 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<cms:svg file="site-sprite.svg"/>
-
 			<!-- Header -->
-			<cms:template file="stock/header_generic.xml">
-				<param name="fixed" value="fixed"/>
-				<param name="logo" value="logo.svg"/>
-				<param name="menu" value="parts/main_menu.xml"/>
-				<param name="phone" value="phone_number"/>
-				<param name="phone_sprite_icon" value="site/images/site-sprite.svg#icon-phoneicon"/>
-			</cms:template>
+			<cms:template file="parts/header.xml"/>
 
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<cms:svg file="site-sprite.svg"/>
+
+	<cms:template file="stock/header_generic.xml">
+		<param name="fixed" value="fixed"/>
+		<param name="logo" value="logo.svg"/>
+		<param name="menu" value="parts/main_menu.xml"/>
+		<param name="phone" value="phone_number"/>
+		<param name="phone_sprite_icon" value="site/images/site-sprite.svg#icon-phone"/>
+	</cms:template>
+</document>

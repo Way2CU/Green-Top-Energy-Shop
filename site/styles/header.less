@@ -7,11 +7,11 @@
  */
 
 header {
-	text-align:  center;
-	padding-top:  5px;
-	padding-bottom:  5px;
+	padding: 10px 0px;
 	background-color: white;
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+
+	text-align:  center;
 }
 
 header a.logo {
@@ -21,8 +21,8 @@ header a.logo {
 }
 
 nav#main {
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 3em;
+	margin-right: 3em;
 	vertical-align:  middle;
 }
 
@@ -54,23 +54,28 @@ nav#main > ul > li a:hover {
 	color: @color_special;
 }
 
-nav#main > ul > li:last-of-type  a {
+nav#main > ul > li:last-of-type a {
+	margin-left: 2em;
 	border: 1px solid @color_special;
 	border-radius: @button_border_radius;	
 	color: @color_special;
-	transition: all 0.3s;
 }
 
-nav#main > ul >  li:last-of-type  a:hover {
-	border: 1px solid @color_header;
+nav#main > ul > li:last-of-type a:hover {
+	background-color: @color_special;
+	color: @color_ac_text;
 }
 
 nav#main > ul > li:last-of-type > a svg {
 	display: inline-block;
-	width: 20px;
-	height: 20px;
+	width: 1.5em;
+	height: 1.5em;
 	vertical-align: middle;
 	margin-left:  10px;
+}
+
+nav#main > ul > li:last-of-type > a:hover svg {
+	fill: red;
 }
 
 nav#main ul li ul {
@@ -120,8 +125,9 @@ header a.phone {
 header a.phone svg {
 	display: inline-block;
 	vertical-align: middle;
+	width: 1.5em;
+	height: 1.5em;
 	margin-right: 5px;
-	width: 25px;
-	height: 25px;
+	margin-top: -0.2em;
 }
 
