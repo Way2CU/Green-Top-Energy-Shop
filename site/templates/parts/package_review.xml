@@ -2,7 +2,7 @@
 	<div class="package">
 		<h2><cms:var param="name" multilanguage="yes"/></h2>
 		<p><cms:var param="description" multilanguage="yes"/></p>
-		<a href="#" class="btn_buy">
+		<a href="#" class="button_buy">
 			<svg>
 				<use
 					href="#icon-cart"
