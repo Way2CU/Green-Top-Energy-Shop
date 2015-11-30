@@ -6,33 +6,34 @@
  * Authors: Mladen Mijatov
  */
 
- /*
-    Home page	
+/**
+ * Packages
  */
-
-section.slider_container {
-	margin-top:  70px;
+section#packages {
 	position: relative;
-	min-height:  600px;
+	min-height: 600px;
+	padding: @vertical_spacing 0;
 }
 
-div.package {
+section#packages div.package {
 	position:  absolute;
 	top: 0px;
 	left:  0px;
-	padding-top:  100px;
+	min-height: 500px;
+	padding-top: 100px;
 	padding-right: calc(~'(50% - 600px)');
-	padding-left:  50%;
-	background-color: @color_ac_blue;
+	padding-left: 50%;
+
 	background-image: url(../images/slides/basic.jpg);
 	background-repeat: no-repeat;
 	background-position: calc(~'(50% - 480px)') top;
-	background-size: 900px 600px;
-	min-height:  500px;
+	background-size: auto 600px;
+
+	color: @color_ac_text;
 }
 
-div.package h2 , div.package p{
-	color: @color_ac_text;
+section#packages div.package {
+	/* add package specific colors */
 }
 
 /**

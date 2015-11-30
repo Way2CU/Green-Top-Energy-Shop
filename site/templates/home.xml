@@ -12,8 +12,9 @@
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
-			<!-- Packages Slider -->
-			<section class="slider_container">
+
+			<!-- Packages slider -->
+			<section id="packages">
 				<cms:module
 					name="shop"
 					action="show_item_list"
