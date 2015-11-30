@@ -63,9 +63,21 @@ nav#main > ul > li >  a:hover {
 }
 
 nav#main > ul > li > a.login {
+	position: relative;
 	margin-left: 2em;
+
 	border-radius: @button_border_radius;	
 	color: @color_special;
+}
+
+nav#main > ul > li > a.login:before {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2.5em;
+	top: -100%;
+	left: 0;
+	content: '';
 }
 
 nav#main > ul > li > a.login:hover {
