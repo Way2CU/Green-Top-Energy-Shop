@@ -55,9 +55,9 @@ Site.on_load = function() {
 	//  Function for displaying packages slider (Home page)
 	Site.packages_slider = new PageControl($('section.slider_container'),$('div.package'));
 	Site.packages_slider
-		.setInterval(4000)
-		.setWrapAround(true)
-		.setAutoResize(true);
+		.setInterval(6000)
+		.setWrapAround(true);
+
 };
 
 
