@@ -10,7 +10,7 @@ header {
 	background-color: white;
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 
-	text-align:  center;
+	text-align: center;
 }
 
 header a.logo {
@@ -18,9 +18,9 @@ header a.logo {
 }
 
 
-header a.logo img{
-	width:  163px;
-	height: 40px;	
+header a.logo img {
+	width: 163px;
+	height: 40px;
 }
 
 nav#main {
@@ -39,11 +39,11 @@ nav#main ul {
 }
 
 nav#main > ul > li {
-	display:  inline-block;
+	display: inline-block;
 	position: relative;
 }
 
-nav#main > ul > li >  a {
+nav#main > ul > li > a {
 	display: block;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -57,7 +57,7 @@ nav#main > ul > li >  a {
 	transition: all 0.3s;
 }
 
-nav#main > ul > li >  a:hover {
+nav#main > ul > li > a:hover {
 	background-color: @color_header;
 	color: @color_ac_text;
 }
@@ -89,7 +89,7 @@ nav#main > ul > li > a.login svg {
 	width: 1.5em;
 	height: 1.5em;
 	vertical-align: middle;
-	margin-left:  10px;
+	margin-left: 10px;
 }
 
 
@@ -102,10 +102,7 @@ nav#main ul li > ul {
 	visibility: hidden;
 	opacity: 0;
 
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: 5px;
 
 	border: 1px solid @color_header;
 	background-color: @color_ac_text;
@@ -118,21 +115,22 @@ nav#main ul li:hover ul {
 	visibility: visible;
 	opacity: 1;
 	max-height: 500px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 nav#main > ul > li:hover > a {
-	background-color:  @color_header;
+	background-color: @color_header;
 	color: @color_ac_text;
 }
 
-nav#main ul li ul li {
+nav#main ul ul li {
 	display: block;
 	margin: 0px;
 	padding: 0px;
 	width: 250px;
 }
 
-nav#main ul li ul li a {
+nav#main ul ul li a {
 	display: block;
 	text-decoration: none;
 	padding-top: 10px;
@@ -144,16 +142,17 @@ nav#main ul li ul li a {
 	transition: all 0.3s;
 }
 
-nav#main ul li ul li:hover a {
+nav#main ul ul li:hover a {
 	background-color: @color_header;
 	color: @color_ac_text ;
 }
 
 header > a.phone {
+	padding: 1em;
 	vertical-align: middle;
 	color: @color_header;
 	font-weight: 700;
-	text-decoration:  none;
+	text-decoration: none;
 }
 
 header > a.phone > svg {
@@ -161,7 +160,8 @@ header > a.phone > svg {
 	vertical-align: middle;
 	width: 1.5em;
 	height: 1.5em;
-	margin-right: 5px;
 	margin-top: -0.2em;
+	margin-right: 5px;
+	fill: @color_ac_green;
 }
 
