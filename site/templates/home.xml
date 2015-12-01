@@ -6,7 +6,7 @@
 		<head>
 			<title><cms:text constant="site_title"/></title>
 			<link href='https://fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
-			<cms:collection include="page_control,animation_chain"/>
+			<cms:collection include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -24,7 +24,7 @@
 				<cms:module
 					name="shop"
 					action="show_item_list"
-					template="parts/package_review.xml"
+					template="parts/package_slide.xml"
 					/>	
 			</section>
 
@@ -40,7 +40,7 @@
 
 			<!-- video section -->
 			<section class="video">
-				<h2><cms:text constant="video_section_label"/></h2>
+				<h2><cms:text constant="video_section_title"/></h2>
 				<img 
 					src="_BASEURL.'/site/images/system.jpg'"  
 					alt="report"
@@ -58,7 +58,6 @@
 					autohide="0"
 					autoplay="0"
 					show_related="0"
-					cms:eval="text_id"
 				/>
 			</section>
 
