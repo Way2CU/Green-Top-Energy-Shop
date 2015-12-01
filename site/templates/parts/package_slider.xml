@@ -5,7 +5,11 @@
 		<h2><cms:var param="name" multilanguage="yes"/></h2>
 		<cms:markdown param="description" multilanguage="yes"/>
 
-		<a href="#" class="button_buy">
+		<a
+			href="url_Make('checkout', 'shop', array('package', $params['uid']))"
+			class="buy"
+			cms:eval="href"
+			>
 			<svg>
 				<use
 					href="#icon-cart"
