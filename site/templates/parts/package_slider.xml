@@ -1,14 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
 <document>
 	<div class="'package '. $params['uid']" cms:eval="class">
 		<h2><cms:var param="name" multilanguage="yes"/></h2>
-		<p><cms:var param="description" multilanguage="yes"/></p>
+		<cms:markdown param="description" multilanguage="yes"/>
+
 		<a href="#" class="button_buy">
 			<svg>
 				<use
 					href="#icon-cart"
 					xlink:href="site/images/site-sprite.svg#icon-cart"
 					/>
-
 			</svg>
 			<cms:text constant="button_buy_package"/>
 		</a>

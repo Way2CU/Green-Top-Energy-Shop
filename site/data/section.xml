@@ -8,9 +8,14 @@
 		<language name="all">
 			<action name="_default" file="basic.xml"/>
 			<action name="basic" file="basic.xml"/>
-			<action name="_default" file="file.xml"/>
-			<action name="_default" file="file.xml"/>
-			<action name="_default" file="file.xml"/>
+			<action name="renewable" file="renewable.xml"/>
+			<action name="business" file="business.xml"/>
+			<action name="industry" file="industry.xml"/>
+		</language>
+	</section>
+	<section name="shop">
+		<language name="all">
+			<action name="checkout" file="checkout.xml"/>
 		</language>
 	</section>
 	<section name="documentation">
