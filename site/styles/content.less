@@ -32,11 +32,15 @@ section#packages div.package {
 	color: @color_ac_text;
 	opacity: 0;
 	visibility: hidden;
+
+	transition: 0.5s opacity, 0s visibility;
+	transition-delay: 0s, 0.5s;
 }
 
 section#packages div.package.visible {
 	opacity: 1;
 	visibility: visible;
+	transition-delay: 0s, 0s;
 }
 
 section#packages div.package.basic {
