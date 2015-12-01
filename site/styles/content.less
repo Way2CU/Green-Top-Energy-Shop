@@ -6,14 +6,29 @@
  * Authors: Mladen Mijatov
  */
 
- /*
-    Home page	
+/**
+ * Packages
  */
-
-section.slider_container {
-	margin-top:  70px;
+section#packages {
 	position: relative;
-	min-height:  600px;
+	min-height: 600px;
+}
+
+section#packages div.package {
+	position:  absolute;
+	top: 0px;
+	left:  0px;
+	min-height: 500px;
+	padding-top: 100px;
+	padding-right: calc(~'(50% - 600px)');
+	padding-left: 50%;
+
+	background-image: url(../images/slides/basic.jpg);
+	background-repeat: no-repeat;
+	background-position: calc(~'(50% - 480px)') top;
+	background-size: auto 600px;
+
+	color: @color_ac_text;
 }
 
 section.slider_containe div.controls {
@@ -64,8 +79,8 @@ div.package.visible {
 	visibility: visible;
 }
 
-div.package h2 , div.package p{
-	color: @color_ac_text;
+section#packages div.package {
+	/* add package specific colors */
 }
 
 div.package a.button_buy {

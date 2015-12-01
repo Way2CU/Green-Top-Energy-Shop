@@ -52,6 +52,9 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
+	// create package slider
+	Site.package_slider = new PageControl('section#packages', 'div.package');
+
 	//  Function for displaying packages slider (Home page)
 	Site.packages_slider = new PageControl($('section.slider_container'),$('div.package'));
 	Site.packages_slider

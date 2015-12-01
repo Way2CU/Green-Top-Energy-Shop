@@ -13,8 +13,9 @@
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
-			<!-- Packages Slider -->
-			<section class="slider_container">
+
+			<!-- Packages slider -->
+			<section id="packages">
 				<div class="controls">
 					<a href="javascript:void(0)"></a>
 					<a href="javascript:void(0)"></a>
