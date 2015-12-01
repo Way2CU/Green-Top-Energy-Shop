@@ -1,0 +1,9 @@
+<document>
+	<article>
+		<h2><cms:var param="title" multilanguage="yes"/></h2>
+		<cms:markdown param="content" multilanguage="yes"/>
+		<a href="url_make(egauge,documentation)" class="button_readMore" cms:eval="href">
+			<cms:text constant="button_read_more"/>
+		</a>
+	</article>	
+</document>
