@@ -15,6 +15,12 @@
 			<cms:template file="parts/header.xml"/>
 			<!-- Packages Slider -->
 			<section class="slider_container">
+				<div class="controls">
+					<a href="javascript:void(0)"></a>
+					<a href="javascript:void(0)"></a>
+					<a href="javascript:void(0)"></a>
+					<a href="javascript:void(0)"></a>
+				</div>
 				<cms:module
 					name="shop"
 					action="show_item_list"
