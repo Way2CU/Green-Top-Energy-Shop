@@ -56,9 +56,9 @@ Site.on_load = function() {
 	Site.package_slider = new PageControl('section#packages', 'div.package');
 
 	//  Function for displaying packages slider (Home page)
-	Site.packages_slider = new PageControl($('section.slider_container'),$('div.package'));
+	Site.packages_slider = new PageControl($('section#packages'),$('div.package'));
 	Site.packages_slider
-		.attachControls($('div.controls a'))
+		.attachControls($('section#packages div.controls a'))
 		.setInterval(6000)
 		.setWrapAround(true);
 
