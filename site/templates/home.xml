@@ -21,6 +21,15 @@
 					template="parts/package_review.xml"
 					/>	
 			</section>
+			<!-- egauge article -->
+			<section class="egauge">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="egauge_article"
+					template="parts/article.xml"
+					/>
+			</section>
 
 			<!-- Features -->
 			<section id="features">
