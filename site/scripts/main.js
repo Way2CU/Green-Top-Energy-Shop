@@ -51,6 +51,13 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	//  Function for displaying packages slider (Home page)
+	Site.packages_slider = new PageControl($('section.slider_container'),$('div.package'));
+	Site.packages_slider
+		.setInterval(4000)
+		.setWrapAround(true)
+		.setAutoResize(true);
 };
 
 
