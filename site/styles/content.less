@@ -17,9 +17,9 @@ section#packages {
 
 section#packages div.package {
 	position: absolute;
-	width: 550px;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
+	right: 0;
 	min-height: 400px;
 	padding-top: 100px;
 	padding-right: calc(~'(50% - 550px)');
@@ -97,6 +97,10 @@ section#packages div.package a.buy svg {
 	margin-right: 10px;
 	width: 1.5em;
 	height: 1.5em;
+}
+
+section#packages div.package a.buy svg {
+	fill: blue;
 }
 
 section#packages div.package.basic a.buy:hover {
