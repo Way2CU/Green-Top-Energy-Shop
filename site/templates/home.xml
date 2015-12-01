@@ -42,7 +42,7 @@
 			<section class="video">
 				<h2><cms:text constant="video_section_label"/></h2>
 				<img 
-					src="_BASEURL.'/site/images/report.jpg'"  
+					src="_BASEURL.'/site/images/system.jpg'"  
 					alt="report"
 					cms:eval="src"
 					/>
