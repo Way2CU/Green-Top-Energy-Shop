@@ -1,6 +1,6 @@
 <document>
 	<li>
-		<a href="#">
+		<a href="url_Make('checkout', 'shop', array('package', $params['uid']))" cms:eval="href">
 			<cms:var param="name" multilanguage="yes"/>
 		</a>
 	</li>
