@@ -21,14 +21,22 @@ div.package {
 	top: 0px;
 	left:  0px;
 	padding-top:  100px;
-	padding-right: calc(~'(50% - 600px)');
+	padding-right: calc(~'(50% - 550px)');
 	padding-left:  50%;
 	background-color: @color_ac_blue;
 	background-image: url(../images/slides/basic.jpg);
 	background-repeat: no-repeat;
-	background-position: calc(~'(50% - 480px)') top;
+	background-position: calc(~'(50% - 500px)') top;
 	background-size: 900px 600px;
 	min-height:  500px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+}
+
+div.package.visible {
+	opacity: 1;
+	visibility: visible;
 }
 
 div.package h2 , div.package p{
