@@ -43,12 +43,12 @@ section#packages div.package.basic {
 	background-color: @color_ac_blue;
 }
 
-section#packages div.package.energy {
+section#packages div.package.renewable {
 	background-color: @color_ac_green;
 	background-image: url(../images/slides/renewable-energy.jpg);
 }
 
-section#packages div.package.home {
+section#packages div.package.business {
 	background-color: @color_ac_red;
 	background-image: url(../images/slides/small-business.jpg);
 }
@@ -88,6 +88,22 @@ section#packages div.controls a.active {
 
 section#packages div.package a.button_buy {
 	margin-top: 1em;
+}
+
+section#packages div.package.basic a.button_buy:hover {
+	background-color: darken(@color_ac_blue, 10%);
+}
+
+section#packages div.package.renewable a.button_buy:hover {
+	background-color: darken(@color_ac_green, 10%);
+}
+
+section#packages div.package.business a.button_buy:hover {
+	background-color: darken(@color_ac_red, 10%);
+}
+
+section#packages div.package.industry a.button_buy:hover {
+	background-color: darken(@color_ac_orange, 10%);
 }
 
 /**
