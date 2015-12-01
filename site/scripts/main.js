@@ -52,16 +52,22 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
+	// create controls for each slide
+	var slides = $('section#packages div.package');
+	var control_container = $('section#packages div.controls');
+
+	slides.each(function(index) {
+		$('<a>')
+			.attr('href', 'javascript: void(0);')
+			.appendTo(control_container);
+	});
+
 	// create package slider
 	Site.package_slider = new PageControl('section#packages', 'div.package');
-
-	//  Function for displaying packages slider (Home page)
-	Site.packages_slider = new PageControl($('section#packages'),$('div.package'));
-	Site.packages_slider
-		.attachControls($('section#packages div.controls a'))
+	Site.package_slider
+		.attachControls('section#packages div.controls a')
 		.setInterval(6000)
 		.setWrapAround(true);
-
 };
 
 
