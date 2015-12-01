@@ -22,9 +22,7 @@
 					template="parts/package_slider.xml"
 					/>	
 
-				<div class="controls">
-	
-				</div>
+				<div class="controls"/>
 			</section>
 
 			<!-- egauge article -->
