@@ -6,7 +6,7 @@
 		<head>
 			<title><cms:text constant="site_title"/></title>
 			<link href='https://fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
-			<cms:collection include="page_control"/>
+			<cms:collection include="page_control,animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
@@ -16,11 +16,51 @@
 
 			<!-- Packages slider -->
 			<section id="packages">
+				<div class="controls">
+					<a href="javascript:void(0)"></a>
+					<a href="javascript:void(0)"></a>
+					<a href="javascript:void(0)"></a>
+					<a href="javascript:void(0)"></a>
+				</div>
 				<cms:module
 					name="shop"
 					action="show_item_list"
 					template="parts/package_review.xml"
 					/>	
+			</section>
+
+			<!-- egauge article -->
+			<section class="egauge">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="egauge_article"
+					template="parts/article.xml"
+					/>
+			</section>
+
+			<!-- video section -->
+			<section class="video">
+				<h2><cms:text constant="video_section_label"/></h2>
+				<img 
+					src="_BASEURL.'/site/images/system.jpg'"  
+					alt="report"
+					cms:eval="src"
+					/>
+				<cms:module
+					name="youtube"
+					action="show"
+					text_id="home_page_video"
+					embed="1"
+					width="550"
+					height="366"
+					player_id="video_player"
+					theme="light"
+					autohide="0"
+					autoplay="0"
+					show_related="0"
+					cms:eval="text_id"
+				/>
 			</section>
 
 			<!-- Features -->
