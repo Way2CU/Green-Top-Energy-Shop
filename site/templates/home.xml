@@ -51,7 +51,7 @@
 					action="show"
 					text_id="home_page_video"
 					embed="1"
-					width="500"
+					width="550"
 					height="366"
 					player_id="video_player"
 					theme="light"
