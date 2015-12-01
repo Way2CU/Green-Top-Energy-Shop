@@ -17,6 +17,7 @@ section#packages {
 
 section#packages div.package {
 	position: absolute;
+	width: 550px;
 	top: 0px;
 	left: 0px;
 	min-height: 500px;
@@ -62,6 +63,54 @@ section#packages div.package h2 {
 	color: @color_ac_text;
 }
 
+section#packages div.package a.buy {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 1em;
+	padding-left: 25px;
+	padding-right: 25px;
+
+	border-radius: @button_border_radius;
+	border: 1px solid @color_ac_text;
+	background-color: @color_ac_text;
+
+	color: @color_header;
+	font-weight: 700;
+	line-height: 4.5em;
+	text-decoration: none;
+
+	transition: all 0.3s;
+}
+
+section#packages div.package a.buy:hover {
+	background-color:  @color_ac_green;
+	color: @color_ac_text ;
+}
+
+section#packages div.package a.buy svg {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 1.5em;
+	height: 1.5em;
+}
+
+section#packages div.package.basic a.buy:hover {
+	background-color: darken(@color_ac_blue, 10%);
+}
+
+section#packages div.package.renewable a.buy:hover {
+	background-color: darken(@color_ac_green, 10%);
+}
+
+section#packages div.package.business a.buy:hover {
+	background-color: darken(@color_ac_red, 10%);
+}
+
+section#packages div.package.industry a.buy:hover {
+	background-color: darken(@color_ac_orange, 10%);
+}
+
 section#packages div.controls {
 	position: absolute;
 	top: 50px;
@@ -86,26 +135,6 @@ section#packages div.controls a.active {
 	background-color: @color_ac_text;
 }
 
-section#packages div.package a.button_buy {
-	margin-top: 1em;
-}
-
-section#packages div.package.basic a.button_buy:hover {
-	background-color: darken(@color_ac_blue, 10%);
-}
-
-section#packages div.package.renewable a.button_buy:hover {
-	background-color: darken(@color_ac_green, 10%);
-}
-
-section#packages div.package.business a.button_buy:hover {
-	background-color: darken(@color_ac_red, 10%);
-}
-
-section#packages div.package.industry a.button_buy:hover {
-	background-color: darken(@color_ac_orange, 10%);
-}
-
 /**
  * Egauge article
  */
@@ -122,8 +151,25 @@ section#egauge article {
 	background-size: auto 100%;
 }
 
-section#egauge article a.button_more {
+section#egauge a.button_more {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	line-height: 3em;
 	margin-top: 1em;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-weight: 700;
+	color: @color_header;
+	background-color: @color_ac_text;
+	border: 1px solid @color_header;
+	border-radius: @button_border_radius;
+	transition: all 0.3s;
+}
+
+section#egauge a.button_more:hover {
+	background-color:  @color_ac_green;
+	color: @color_ac_text ;
 }
 
 /**
