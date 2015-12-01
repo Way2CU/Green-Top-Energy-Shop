@@ -21,6 +21,7 @@
 					template="parts/package_review.xml"
 					/>	
 			</section>
+
 			<!-- egauge article -->
 			<section class="egauge">
 				<cms:module
@@ -29,6 +30,30 @@
 					text_id="egauge_article"
 					template="parts/article.xml"
 					/>
+			</section>
+
+			<!-- video section -->
+			<section class="video">
+				<h2><cms:text constant="video_section_label"/></h2>
+				<img 
+					src="_BASEURL.'/site/images/report.jpg'"  
+					alt="report"
+					cms:eval="src"
+					/>
+				<cms:module
+					name="youtube"
+					action="show"
+					text_id="home_page_video"
+					embed="1"
+					width="500"
+					height="366"
+					player_id="video_player"
+					theme="light"
+					autohide="0"
+					autoplay="0"
+					show_related="0"
+					cms:eval="text_id"
+				/>
 			</section>
 
 			<!-- Features -->
