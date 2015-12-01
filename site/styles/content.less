@@ -39,9 +39,23 @@ section#packages div.package.visible {
 	visibility: visible;
 }
 
-section#packages div.package {
-	/* add package specific colors */
-	background-color: @color_header;
+section#packages div.package.basic {
+	background-color: @color_ac_blue;
+}
+
+section#packages div.package.energy {
+	background-color: @color_ac_green;
+	background-image: url(../images/slides/renewable-energy.jpg);
+}
+
+section#packages div.package.home {
+	background-color: @color_ac_red;
+	background-image: url(../images/slides/small-business.jpg);
+}
+
+section#packages div.package.industry {
+	background-color: @color_ac_orange;
+	background-image: url(../images/slides/business-light-industrial.jpg);
 }
 
 section#packages div.package h2 {
