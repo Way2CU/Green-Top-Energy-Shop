@@ -30,7 +30,7 @@
 			</section>
 
 			<!-- egauge article -->
-			<section class="egauge">
+			<section id="egauge">
 				<cms:module
 					name="articles"
 					action="show"
@@ -40,8 +40,8 @@
 			</section>
 
 			<!-- video section -->
-			<section class="video">
-				<h2><cms:text constant="video_section_title"/></h2>
+			<section id="video">
+				<h2><cms:text constant="video_title"/></h2>
 				<img 
 					src="_BASEURL.'/site/images/system.jpg'"  
 					alt="report"
