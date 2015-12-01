@@ -34,6 +34,20 @@ section#packages div.package {
 	visibility: hidden;
 }
 
+section#packages div.package.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+section#packages div.package {
+	/* add package specific colors */
+	background-color: @color_header;
+}
+
+section#packages div.package h2 {
+	color: @color_ac_text;
+}
+
 section#packages div.controls {
 	position: absolute;
 	top: 50px;
@@ -57,20 +71,6 @@ section#packages div.controls a {
 
 section#packages div.controls a.active {
 	background-color: @color_ac_text;
-}
-
-section#packages div.package.visible {
-	opacity: 1;
-	visibility: visible;
-}
-
-section#packages div.package {
-	/* add package specific colors */
-	background-color: @color_header;
-}
-
-section#packages div.package h2 {
-	color: @color_ac_text;
 }
 
 div.package a.button_buy {
