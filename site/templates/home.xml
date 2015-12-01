@@ -41,7 +41,7 @@
 
 			<!-- video section -->
 			<section id="video">
-				<h2><cms:text constant="video_title"/></h2>
+				<h2><cms:text constant="title_video"/></h2>
 				<img 
 					src="_BASEURL.'/site/images/system.jpg'"  
 					alt="report"
