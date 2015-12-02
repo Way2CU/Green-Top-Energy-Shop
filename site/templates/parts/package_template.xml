@@ -1,0 +1,28 @@
+<document>
+	<section id="package">
+		<h2><cms:var param="name" multilanguage="yes"/></h2>
+		<cms:markdown param="description" multilanguage="yes"/>
+
+		<a
+			href="url_Make('checkout', 'shop', array('package', $params['uid']))"
+			class="buy"
+			cms:eval="href"
+			>
+			<svg>
+				<use
+					href="#icon-cart"
+					xlink:href="site/images/site-sprite.svg#icon-cart"
+					/>
+			</svg>
+			<cms:text constant="button_buy_package"/>
+		</a>
+
+		<cms:module
+			name="articles"
+			action="show"
+			text_id="'package_'.$params['uid']"
+			template="parts/package_article.xml"
+			cms:eval="text_id"
+			/>
+	</section>
+</document>
