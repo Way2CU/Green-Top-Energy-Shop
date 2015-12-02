@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="checkout" module="shop"/>
+			</title>
+
+			<link href='https://fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
+			<cms:module name="shop" action="include_scripts"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<!-- Header -->
+			<cms:template file="parts/header.xml"/>
+
+			<!-- Configure checkout -->
+			<cms:module
+				name="shop"
+				action="set_item_as_cart"
+				uid="fix_chars($_REQUEST['package'])"
+				count="1"
+				cms:eval="uid"
+				/>
+			<cms:module
+				name="shop"
+				action="set_terms"
+				link="url_Make('terms-of-use', 'help')"
+				cms:eval="link"
+				/>
+
+			<!-- Show checkout -->
+			<cms:module
+				name="shop"
+				action="show_checkout_form"
+				include_shipping="1"
+				/>
+
+			<!-- Footer -->
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>
