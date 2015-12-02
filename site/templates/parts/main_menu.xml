@@ -3,8 +3,7 @@
 		<li>
 			<a
 				class="$section == 'packages' ? 'active' : false"
-				href="url_Make('', 'packages')"
-				cms:eval="href"
+				href="javascript:void()"
 				cms:optional="class"
 				>
 				<cms:text constant="menu_packages"/>
