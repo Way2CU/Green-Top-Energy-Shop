@@ -1,0 +1,5 @@
+<document>
+	<article>
+		<h2><cms:var param="title" multilanguage="yes"/></h2>
+	</article>
+</document>
