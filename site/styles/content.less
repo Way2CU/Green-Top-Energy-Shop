@@ -15,7 +15,8 @@ section#packages {
 	min-height: 500px;
 }
 
-section#packages div.package {
+section#package_details,
+section#packages div.package { 
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -37,36 +38,52 @@ section#packages div.package {
 	transition-delay: 0s, 0.5s;
 }
 
+section#package_details {
+	display: block;
+	position: relative;
+	margin-top: 70px;
+	padding-top: 50px;
+	opacity: 1;
+	visibility: visible;
+	min-height: 500px;
+}
+
 section#packages div.package.visible {
 	opacity: 1;
 	visibility: visible;
 	transition-delay: 0s, 0s;
 }
 
+section#package_details.basic,
 section#packages div.package.basic {
 	background-color: @color_ac_blue;
 	background-image: url(../images/slides/basic.jpg);
 }
 
+section#package_details.renewable,
 section#packages div.package.renewable {
 	background-color: @color_ac_green;
 	background-image: url(../images/slides/renewable-energy.jpg);
 }
 
+section#package_details.business,
 section#packages div.package.business {
 	background-color: @color_ac_red;
 	background-image: url(../images/slides/small-business.jpg);
 }
 
+section#package_details.industry,
 section#packages div.package.industry {
 	background-color: @color_ac_orange;
 	background-image: url(../images/slides/business-light-industrial.jpg);
 }
 
+section#package_details h2,
 section#packages div.package h2 {
 	color: @color_ac_text;
 }
 
+section#package_details a.buy,
 section#packages div.package a.buy {
 	display: inline-block;
 	vertical-align: middle;
@@ -86,11 +103,13 @@ section#packages div.package a.buy {
 	transition: all 0.3s;
 }
 
+section#package_details a.buy:hover,
 section#packages div.package a.buy:hover {
 	background-color:  @color_ac_green;
 	color: @color_ac_text ;
 }
 
+section#package_details a.buy svg,
 section#packages div.package a.buy svg {
 	display: inline-block;
 	vertical-align: middle;
@@ -101,18 +120,22 @@ section#packages div.package a.buy svg {
 	margin-top: -0.3em;
 }
 
+section#package_details.basic a.buy:hover,
 section#packages div.package.basic a.buy:hover {
 	background-color: darken(@color_ac_blue, 10%);
 }
 
+section#package_details.renewable a.buy:hover,
 section#packages div.package.renewable a.buy:hover {
 	background-color: darken(@color_ac_green, 10%);
 }
 
+section#package_details.business a.buy:hover,
 section#packages div.package.business a.buy:hover {
 	background-color: darken(@color_ac_red, 10%);
 }
 
+section#package_details.industry a.buy:hover,
 section#packages div.package.industry a.buy:hover {
 	background-color: darken(@color_ac_orange, 10%);
 }
@@ -204,3 +227,6 @@ section#features {
 	background-color: @color_features;
 	color: @color_features_text;
 }
+
+
+
