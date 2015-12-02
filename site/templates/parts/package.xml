@@ -1,8 +1,7 @@
 <document>
-	<section id="package">
+	<section id="package_details" class="$params['uid']" cms:eval="class">
 		<h2><cms:var param="name" multilanguage="yes"/></h2>
 		<cms:markdown param="description" multilanguage="yes"/>
-
 		<a
 			href="url_Make('checkout', 'shop', array('package', $params['uid']))"
 			class="buy"
@@ -16,11 +15,10 @@
 			</svg>
 			<cms:text constant="button_buy_package"/>
 		</a>
-
 		<cms:module
 			name="articles"
 			action="show"
-			text_id="'package_'.$params['uid']"
+			text_id="$params['uid']"
 			template="parts/package_article.xml"
 			cms:eval="text_id"
 			/>
