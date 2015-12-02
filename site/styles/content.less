@@ -85,6 +85,12 @@ section#packages div.package.industry {
 section#package_details h2,
 section#packages div.package h2 {
 	color: @color_ac_text;
+	padding-left: 20px;
+}
+
+section#package_details p,
+section#packages div.package p {
+	padding-left: 20px;
 }
 
 section#package_details a.buy,
@@ -92,7 +98,8 @@ section#packages div.package a.buy {
 	display: inline-block;
 	vertical-align: middle;
 	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
+	margin-left: 20px;
 	padding: 1em;
 	padding-bottom: 0.7em;
 
@@ -148,7 +155,7 @@ section#packages div.package.industry a.buy:hover {
 section#packages div.controls {
 	position: absolute;
 	top: 50px;
-	left: 50%;
+	left: 51%;
 }
 
 section#packages div.controls a {
@@ -169,12 +176,14 @@ section#packages div.controls a.active {
 
 section#package_details article {
 	display: block;
-	padding-right: 55%;
+	padding-top: 10px;
+	padding-bottom: 10px;	
+	padding-right: calc(~'100% + (160px - ' @package_content_width ~')');
 	background-image: url(../images/basic_detail.jpg);
 	background-repeat: no-repeat;
-	background-position: calc(~'(50% + 240px)') top;
+	background-position: calc(@package_content_width - 100px) top;
 	background-size: auto 413px;
-	min-height: 400px;
+	min-height: 380px;
 }
 
 section#package_details.basic article {
