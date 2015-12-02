@@ -39,7 +39,6 @@
 				name="shop"
 				action="show_checkout_form"
 				include_shipping="1"
-				payment_method="tranzila"
 				/>
 
 			<!-- Footer -->
