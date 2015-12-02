@@ -22,15 +22,6 @@
 				cms:eval="uid"
 				/>
 			
-			<cms:module
-				name="articles"
-				action="show_group"
-				text_id="$action"
-				template="parts/group_features.xml"
-				cms:eval="text_id"
-			/>
-	
-
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
 		</body>
