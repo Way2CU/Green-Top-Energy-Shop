@@ -11,6 +11,7 @@
 	<module name="gallery" order="2" preload="no"/>
 	<module name="articles" order="3" preload="no"/>
 	<module name="contact_form" order="4" preload="no"/>
+	<module name="country_list" order="5" preload="no"/>
 
 	<user
 		fullname="Administrator"
