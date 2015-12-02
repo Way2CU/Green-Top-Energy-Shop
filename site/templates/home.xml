@@ -20,7 +20,7 @@
 					name="shop"
 					action="show_item_list"
 					template="parts/package_slider.xml"
-					/>	
+					/>
 
 				<div class="controls"/>
 			</section>
@@ -38,8 +38,8 @@
 			<!-- Video -->
 			<section id="video">
 				<h2><cms:text constant="title_video"/></h2>
-				<img 
-					src="_BASEURL.'/site/images/system.jpg'"  
+				<img
+					src="_BASEURL.'/site/images/system.jpg'"
 					alt="report"
 					cms:eval="src"
 					/>
@@ -59,18 +59,7 @@
 			</section>
 
 			<!-- Features -->
-			<section id="features">
-				<h2><cms:text constant="title_features"/></h2>
-
-				<ul>
-					<cms:module
-						name="articles"
-						action="show_list"
-						text_id="features"
-						template="stock/features_generic.xml"
-						/>
-				</ul>
-			</section>
+			<cms:template file="parts/features.xml"/>
 
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>

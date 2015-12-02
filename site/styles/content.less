@@ -16,18 +16,18 @@ section#packages {
 }
 
 section#package_details,
-section#packages div.package { 
+section#packages div.package {
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	min-height: 400px;
 	padding-top: 100px;
-	padding-right: calc(~'(50% - 550px)');
+	padding-right: calc(~'50% - ' @package_content_width);
 	padding-left: 50%;
 
 	background-repeat: no-repeat;
-	background-position: calc(~'(50% - 500px)') top;
+	background-position: calc(~'50% - ' (@package_content_width - @vertical_spacing)) top;
 	background-size: auto 600px;
 
 	color: @color_ac_text;

@@ -19,7 +19,7 @@
 				action="show_item"
 				uid="$action"
 				template="parts/package.xml"
-				cms:eval="uid"	
+				cms:eval="uid"
 				/>
 
 			<!-- Footer -->

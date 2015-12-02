@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<section id="features">
+		<h2><cms:text constant="title_features"/></h2>
+
+		<ul>
+			<cms:module
+				name="articles"
+				action="show_list"
+				text_id="features"
+				template="stock/features_generic.xml"
+				/>
+		</ul>
+	</section>
+</document>
