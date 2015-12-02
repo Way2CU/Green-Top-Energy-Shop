@@ -43,6 +43,10 @@ section#package_details {
 	position: relative;
 	margin-top: 70px;
 	padding-top: 50px;
+	padding-right: 0px;
+	padding-left: 50%;
+	background-position: calc(~'(50% - 510px)') top;
+	background-size: auto 680px;
 	opacity: 1;
 	visibility: visible;
 	min-height: 500px;
@@ -88,6 +92,7 @@ section#packages div.package a.buy {
 	display: inline-block;
 	vertical-align: middle;
 	margin-top: 1em;
+	margin-bottom: 1em;
 	padding: 1em;
 	padding-bottom: 0.7em;
 
@@ -160,6 +165,20 @@ section#packages div.controls a {
 
 section#packages div.controls a.active {
 	background-color: @color_ac_text;
+}
+
+section#package_details article {
+	display: block;
+	padding-right: 55%;
+	background-image: url(../images/basic_detail.jpg);
+	background-repeat: no-repeat;
+	background-position: calc(~'(50% + 240px)') top;
+	background-size: auto 413px;
+	min-height: 400px;
+}
+
+section#package_details.basic article {
+	background-color: darken(@color_ac_blue, 10%);
 }
 
 /**
