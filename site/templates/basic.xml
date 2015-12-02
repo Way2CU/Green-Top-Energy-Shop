@@ -17,8 +17,9 @@
 			<cms:module
 				name="shop"
 				action="show_item"
-				uid="basic"
-				template="parts/package_template.xml"	
+				uid="$action"
+				template="parts/package.xml"
+				cms:eval="uid"	
 				/>
 
 			<!-- Footer -->
