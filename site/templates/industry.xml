@@ -21,6 +21,45 @@
 				template="parts/package.xml"
 				cms:eval="uid"
 				/>
+				
+			<section id="package_features" class="$action" cms:eval="class">
+				<h2><cms:text constant="title_package_features"/></h2>
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="$action"
+						template="stock/features_generic.xml"
+						cms:eval="group"
+						/>		
+				</ul>
+
+				<a
+					href="url_Make('checkout', 'shop', array('package', $params['uid']))"
+					class="buy"
+					cms:eval="href"
+					>
+					<svg>
+						<use
+							href="#icon-cart"
+							xlink:href="site/images/site-sprite.svg#icon-cart"
+							/>
+					</svg>
+					<cms:text constant="button_buy_package"/>
+				</a>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="$action.'_info'"
+					template="parts/package_article.xml"
+					cms:eval="text_id"
+					/>
+
+			</section>
+
+			<!-- Features -->
+			<cms:template file="parts/features.xml"/>				
 			
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
