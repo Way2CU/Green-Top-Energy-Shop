@@ -36,7 +36,7 @@
 						>
 						<param name="title" value=""/>
 						<param name="sprite" value="site/images/site-sprite.svg"/>
-					</cms:module>
+					</cms:module>	
 				</ul>
 
 				<!-- Buy now button -->
