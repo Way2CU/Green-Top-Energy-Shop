@@ -36,7 +36,7 @@ section#packages div.package {
 	transition: 0.5s opacity, 0s visibility;
 	transition-delay: 0s, 0.5s;
 }
-
+section#about_egauge,
 section#package_details {
 	display: block;
 	position: relative;
@@ -45,9 +45,15 @@ section#package_details {
 	padding-left: 50%;
 	background-position: calc(~'(50% - 510px)') top;
 	background-size: auto 680px;
+	background-repeat:  no-repeat;
 	opacity: 1;
 	visibility: visible;
 	min-height: 500px;
+}
+
+section#about_egauge {
+	background-size: auto 590px;
+	min-height: 540px;
 }
 
 section#packages div.package.visible {
@@ -80,10 +86,20 @@ section#packages div.package.industry {
 	background-image: url(../images/slides/business-light-industrial.jpg);
 }
 
+section#about_egauge {
+	background-image: url(../images/eguage-header.jpg);
+	background-color: @color_ac_blue;
+}
+
+section#about_egauge h2,
 section#package_details h2,
 section#packages div.package h2 {
 	color: @color_ac_text;
 	padding-left: 20px;
+}
+
+section#about_egauge h2 {
+	padding-left: 40px;
 }
 
 section#package_details p,
@@ -216,10 +232,12 @@ section#package_details.industry article {
 /**
  * Egauge article
  */
+section.eguage_details,
 section#egauge {
 	padding: @vertical_spacing calc(~'(100% - 1200px) / 2');
 }
 
+section.eguage_details article,
 section#egauge article {
 	display: block;
 	padding-right: 50%;
@@ -227,6 +245,10 @@ section#egauge article {
 	background-repeat: no-repeat;
 	background-position: calc(~'(50% + 330px)') center;
 	background-size: auto 100%;
+}
+
+section.eguage_details article {
+	padding-bottom: 100px;
 }
 
 section#egauge a.button_more {
