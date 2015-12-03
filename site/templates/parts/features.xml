@@ -8,7 +8,7 @@
 			<cms:module
 				name="articles"
 				action="show_list"
-				text_id="features"
+				group="features"
 				template="stock/features_generic.xml"
 				/>
 		</ul>
