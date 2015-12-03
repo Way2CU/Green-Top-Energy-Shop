@@ -107,6 +107,7 @@ section#packages div.package p {
 	padding-left: 20px;
 }
 
+section#package_features a.buy,
 section#package_details a.buy,
 section#packages div.package a.buy {
 	display: inline-block;
@@ -129,12 +130,18 @@ section#packages div.package a.buy {
 	transition: all 0.3s;
 }
 
+section#package_features a.buy {
+	border: 1px solid @color_ac_blue;
+}
+
+
 section#package_details a.buy:hover,
 section#packages div.package a.buy:hover {
 	background-color:  @color_ac_green;
 	color: @color_ac_text ;
 }
 
+section#package_features a.buy svg,
 section#package_details a.buy svg,
 section#packages div.package a.buy svg {
 	display: inline-block;
@@ -146,9 +153,14 @@ section#packages div.package a.buy svg {
 	margin-top: -0.3em;
 }
 
+section#package_features a.buy:hover,
 section#package_details.basic a.buy:hover,
 section#packages div.package.basic a.buy:hover {
 	background-color: darken(@color_ac_blue, 10%);
+}
+
+section#package_features a.buy:hover {
+	color: @color_ac_text;
 }
 
 section#package_details.renewable a.buy:hover,
@@ -237,6 +249,7 @@ section#egauge {
 	padding: @vertical_spacing calc(~'(100% - 1200px) / 2');
 }
 
+section#package_features article,
 section.eguage_details article,
 section#egauge article {
 	display: block;
@@ -245,6 +258,14 @@ section#egauge article {
 	background-repeat: no-repeat;
 	background-position: calc(~'(50% + 330px)') center;
 	background-size: auto 100%;
+}
+
+section#package_features article {
+	text-align: left;
+	padding-left: @vertical_spacing;
+	padding-right: @vertical_spacing;
+	background-image: none;
+	color: @color_ac_blue;
 }
 
 section.eguage_details article {
@@ -295,6 +316,7 @@ section#video iframe {
 /**
  * Features
  */
+section#package_features, 
 section#features {
 	padding: @vertical_spacing calc(~'(100% - 1200px) / 2');
 	background-color: @color_features;
@@ -302,25 +324,42 @@ section#features {
 	text-align:  center;
 }
 
+section#package_features {
+	background-color: @color_ac_text;
+	color: @color_text;
+}
+
 section#features h2 {
 	color: @color_ac_text;
 }
 
+section#package_features ul,
 section#features ul {
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
 }
 
+section#package_features ul li,
 section#features ul li {
 	display: inline-block;
 	vertical-align: top;
 	width: 25%;
 }
 
+section#package_features ul li {
+	width: 33.3%;
+}
+
+section#package_features ul li p,
 section#features ul li p {
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+section#package_features ul li p {
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 /**
