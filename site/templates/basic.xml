@@ -14,6 +14,7 @@
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
 
+			<!-- Top package information -->
 			<cms:module
 				name="shop"
 				action="show_item"
@@ -23,6 +24,7 @@
 				/>
 
 			<section id="package_features" class="$action" cms:eval="class">
+				<!-- Features -->
 				<h2><cms:text constant="title_package_features"/></h2>
 				<ul>
 					<cms:module
@@ -34,9 +36,10 @@
 						>
 						<param name="title" value=""/>
 						<param name="sprite" value="site/images/site-sprite.svg"/>
-					</cms:module>		
+					</cms:module>	
 				</ul>
 
+				<!-- Buy now button -->
 				<a
 					href="url_Make('checkout', 'shop', array('package', $action))"
 					class="buy"
@@ -51,6 +54,7 @@
 					<cms:text constant="button_buy_package"/>
 				</a>
 
+				<!-- Additional information -->
 				<cms:module
 					name="articles"
 					action="show"
@@ -58,12 +62,11 @@
 					template="parts/package_article.xml"
 					cms:eval="text_id"
 					/>
-
 			</section>
 
 			<!-- Features -->
 			<cms:template file="parts/features.xml"/>
-	
+
 
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
