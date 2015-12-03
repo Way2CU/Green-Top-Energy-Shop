@@ -185,6 +185,7 @@ section#package_details article {
 }
 
 section#package_details.basic article {
+	background-image: url(../images/basic_detail.jpg);
 	background-color: lighten(@color_ac_blue, 10%);
 }
 
@@ -201,6 +202,15 @@ section#package_details.business article {
 section#package_details.industry article {
 	background-image: url(../images/industry_detail.jpg);
 	background-color: darken(@color_ac_orange, 10%);
+}
+
+@media screen and (max-width: 1500px) {
+	section#package_details.basic article,
+	section#package_details.renewable article,
+	section#package_details.business article,
+	section#package_details.industry article {
+		background-image: none;
+	}
 }
 
 /**
