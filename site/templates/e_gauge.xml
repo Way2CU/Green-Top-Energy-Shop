@@ -25,6 +25,20 @@
 					text_id="ethernet"
 					template="parts/basic_article.xml"
 					/>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="eguage_features"
+					template="parts/basic_article.xml"
+					/>	
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="specification"
+					template="parts/basic_article.xml"
+					/>		
 			</section>
 
 
