@@ -35,7 +35,7 @@
 				</ul>
 
 				<a
-					href="url_Make('checkout', 'shop', array('package', $params['uid']))"
+					href="url_Make('checkout', 'shop', array('package', $action))"
 					class="buy"
 					cms:eval="href"
 					>

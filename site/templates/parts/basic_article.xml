@@ -1,5 +1,5 @@
 <document>
-	<article>
+	<article class="$params['text_id']" cms:eval="class">
 		<h2><cms:var param="title" multilanguage="yes"/></h2>
 		<cms:markdown param="content" multilanguage="yes"/>
 	</article>	
