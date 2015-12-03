@@ -10,7 +10,10 @@
 				action="show_list"
 				group="features"
 				template="stock/features_generic.xml"
-				/>
+				>
+				<param name="title" value=""/>
+				<param name="sprite" value="site/images/site-sprite.svg"/>
+			</cms:module>
 		</ul>
 	</section>
 </document>
