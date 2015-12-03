@@ -24,10 +24,10 @@
 			
 			<cms:module
 				name="articles"
-				action="show_group"
-				text_id="$action"
-				template="parts/group_features.xml"
-				cms:eval="text_id"
+				action="show_list"
+				group="$action"
+				template="parts/features_generic.xml"
+				cms:eval="group"
 			/>
 	
 
