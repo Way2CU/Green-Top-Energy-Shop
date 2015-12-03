@@ -26,7 +26,7 @@
 				name="articles"
 				action="show_list"
 				group="$action"
-				template="parts/features_generic.xml"
+				template="stock/features_generic.xml"
 				cms:eval="group"
 			/>
 	
