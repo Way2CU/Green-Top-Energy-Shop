@@ -18,7 +18,7 @@
 				<h2><cms:text constant="title_egauge"/></h2>
 			</section>
 
-			<section class="eguage_details">
+			<section id="eguage_details">
 				<cms:module
 					name="articles"
 					action="show"
