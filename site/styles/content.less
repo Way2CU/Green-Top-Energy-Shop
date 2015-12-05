@@ -377,6 +377,11 @@ section#package_features {
 	color: @color_text;
 }
 
+section#features h2,
+section#package_features h2 {
+	margin-top: 0px;
+}
+
 section#features h2 {
 	color: @color_ac_text;
 }
@@ -385,6 +390,7 @@ section#package_features ul,
 section#features ul {
 	margin: 0px;
 	padding: 0px;
+	margin-top: 60px;
 	list-style-type: none;
 }
 
@@ -399,6 +405,7 @@ section#package_features ul li {
 	width: 33.3%;
 }
 
+section#package_features ul li svg,
 section#features ul li svg {
 	display: block;
 	margin-left: auto;
@@ -406,6 +413,10 @@ section#features ul li svg {
 	fill: white;
 	width: 70px;
 	height: 70px;
+}
+
+section#package_features ul li svg {
+	fill: @color_header;
 }
 
 section#features ul li h4 {
