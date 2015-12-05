@@ -1,0 +1,12 @@
+<document>
+	<cms:module
+		name="youtube"
+		action="show"
+		id="$params['id']"
+		embed="1"
+		width="550"
+		height="366"
+		enable_api="1"
+		cms:eval="id"
+	/>
+</document>
