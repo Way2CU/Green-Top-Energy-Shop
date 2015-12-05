@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title><cms:text constant="site_title"/><cms:raw text=" - "/><cms:text constant="basic_page_label"/></title>
+			<link href='https://fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
+			<cms:collection include="page_control"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<!-- Header -->
+			<cms:template file="parts/header.xml"/>
+
+			<section id="title_video">
+				<h2><cms:text constant="title_videos_page"/></h2>
+			</section>
+
+			<section id="videos">
+				<cms:module
+					name="youtube"
+					action="show_list"
+					group_text_id="videos"
+					template="parts/video_list.xml"	
+				/>
+			</section>
+
+
+			<!-- Footer -->
+			<cms:template file="parts/footer.xml"/>
+		</body>
+	</html>
+</document>
