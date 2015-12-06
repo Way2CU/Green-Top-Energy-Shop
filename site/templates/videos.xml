@@ -27,7 +27,6 @@
 					/>
 			</section>
 
-
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
 		</body>
