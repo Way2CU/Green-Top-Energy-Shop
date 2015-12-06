@@ -1,0 +1,4 @@
+<document>
+	<h4><cms:var param="name" multilanguage="yes"/></h4>
+	<p><cms:var param="description" multilanguage="yes"/></p>
+</document>
