@@ -7,6 +7,7 @@
     	"eguage_page_label": "egauge",
     	"documentation_page_label": "documentation",
     	"video_page_label": "video",
+    	"about_page_label": "about",
 	"phone_number": "09-00000000",
 	"title_features": "Additional options when purchasing this package",
 	"title_package_features": "What the package Includes",
@@ -28,5 +29,6 @@
 	"title_video": "Simple and yet Beautiful",
 	"title_videos_page": "A title about video",
 	"title_egauge": "A title about eGauge",
-	"title_documentation": "A title about documentation"
+	"title_documentation": "A title about documentation",
+	"title_about": "About us"
 }
