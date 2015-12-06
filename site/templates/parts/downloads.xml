@@ -1,4 +1,11 @@
 <document>
-	<h4><cms:var param="name" multilanguage="yes"/></h4>
-	<p><cms:var param="description" multilanguage="yes"/></p>
+	<a href="$params['url']" cms:eval="href">
+		<img 
+			src="_BASEURL.'/site/images/doc-icon.svg'" 
+			alt="doc-icon"
+			cms:eval="src"
+			/>
+		<h4><cms:var param="name" multilanguage="yes"/></h4>
+		<p><cms:var param="description" multilanguage="yes"/></p>	
+	</a>
 </document>
