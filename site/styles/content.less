@@ -36,6 +36,8 @@ section#packages div.package {
 	transition: 0.5s opacity, 0s visibility;
 	transition-delay: 0s, 0.5s;
 }
+
+section#title_documentation,
 section#title_video,
 section#about_egauge,
 section#package_details {
@@ -52,6 +54,7 @@ section#package_details {
 	min-height: 500px;
 }
 
+section#title_documentation,
 section#title_video,
 section#about_egauge {
 	background-size: auto 590px;
@@ -98,6 +101,12 @@ section#title_video {
 	background-color: black;
 }
 
+section#title_documentation {
+	background-image: url(../images/documentation-background.jpg);
+	background-color: @color_ac_blue;
+}
+
+section#title_documentation h2,
 section#title_video h2,
 section#about_egauge h2,
 section#package_details h2,
@@ -256,12 +265,15 @@ section#package_details.industry article {
 /**
  * Egauge article
  */
+section#downloads,
 section#videos,
 section#eguage_details,
 section#egauge {
 	padding: @vertical_spacing calc(~'(100% - 1200px) / 2');
 }
 
+section#downloads,
+section#videos,
 section#eguage_details {
 	text-align: center;
 }
