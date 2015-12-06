@@ -21,7 +21,7 @@
 			<section id="downloads">
 				<cms:module
 					name="downloads"
-					action="show"
+					action="show_list"
 					template="parts/downloads.xml"
 					/>
 			</section>
