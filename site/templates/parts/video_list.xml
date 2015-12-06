@@ -1,12 +1,15 @@
 <document>
-	<cms:module
-		name="youtube"
-		action="show"
-		id="$params['id']"
-		embed="1"
-		width="550"
-		height="366"
-		enable_api="1"
-		cms:eval="id"
-	/>
+	<div class="video_wrap">
+	<h4><cms:var param="title" multilanguage="yes"/></h4>
+		<cms:module
+			name="youtube"
+			action="show"
+			id="$params['id']"
+			embed="1"
+			width="550"
+			height="366"
+			enable_api="1"
+			cms:eval="id"
+		/>	
+	</div>
 </document>
