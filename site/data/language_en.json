@@ -1,6 +1,12 @@
 {
     "site_title": "GreenTopsEnergy",
     	"basic_page_label": "basic",
+    	"renewable_page_label": "renewable",
+    	"business_page_label": "business",
+    	"industry_page_label": "industry",
+    	"eguage_page_label": "egauge",
+    	"documentation_page_label": "documentation",
+    	"video_page_label": "video",
 	"phone_number": "09-00000000",
 	"title_features": "Additional options when purchasing this package",
 	"title_package_features": "What the package Includes",
