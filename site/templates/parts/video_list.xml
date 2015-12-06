@@ -1,6 +1,6 @@
 <document>
 	<div class="video_wrap">
-	<h4><cms:var param="title" multilanguage="yes"/></h4>
+		<h4><cms:var param="title" multilanguage="yes"/></h4>
 		<cms:module
 			name="youtube"
 			action="show"
