@@ -24,7 +24,7 @@
 					action="show_list"
 					group_text_id="videos"
 					template="parts/video_list.xml"	
-				/>
+					/>
 			</section>
 
 
