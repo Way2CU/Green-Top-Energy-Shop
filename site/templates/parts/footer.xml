@@ -19,22 +19,25 @@
 						template="parts/shop_item_links.xml"		
 						/>
 				</ul>
+				
+				<!-- Phone number -->
+				<a
+					class="phone"
+					href="'tel:'.urlencode(Language::getText($template['phone']))"
+					cms:eval="href"
+					>
+					<svg>
+						<use
+							href="#icon-phone"
+							xlink:href="site/images/site-sprite.svg#icon-phone"
+							/>
+					</svg>
+					<cms:text constant="phone_number"/>
+				</a>
+
 			</nav>
 
-			<!-- Phone number -->
-			<a
-				class="phone"
-				href="'tel:'.urlencode(Language::getText($template['phone']))"
-				cms:eval="href"
-				>
-				<svg>
-					<use
-						href="#icon-phone"
-						xlink:href="site/images/site-sprite.svg#icon-phone"
-						/>
-				</svg>
-				<cms:text constant="phone_number"/>
-			</a>
+
 
 			<!-- Policy menu -->
 			<nav id="policy">
