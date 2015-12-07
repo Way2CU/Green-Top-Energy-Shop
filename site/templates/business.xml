@@ -23,6 +23,16 @@
 				/>
 			
 			<section id="package_features" class="$action" cms:eval="class">
+				<h2><cms:text constant="title_package_system"/></h2>
+
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="$action.'_system'"
+					template="parts/package_article.xml"
+					cms:eval="text_id"
+					/>
+
 				<h2><cms:text constant="title_package_features"/></h2>
 
 				<ul>
