@@ -31,7 +31,10 @@
 						group="$action"
 						template="stock/features_generic.xml"
 						cms:eval="group"
-						/>		
+						>
+						<param name="title" value=""/>
+						<param name="sprite" value="site/images/site-sprite.svg"/>
+					</cms:module>		
 				</ul>
 
 				<a
