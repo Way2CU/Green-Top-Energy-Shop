@@ -61,7 +61,6 @@
 					/>
 
 			</section>
-
 			<!-- Features -->
 			<cms:template file="parts/features.xml"/>
 	
