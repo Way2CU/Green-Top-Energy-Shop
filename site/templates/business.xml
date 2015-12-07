@@ -24,6 +24,7 @@
 			
 			<section id="package_features" class="$action" cms:eval="class">
 				<h2><cms:text constant="title_package_features"/></h2>
+
 				<ul>
 					<cms:module
 						name="articles"
