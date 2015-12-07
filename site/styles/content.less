@@ -576,6 +576,15 @@ div#checkout_container h5 {
 	font-weight: 400;
 }
 
+div#checkout_steps a:before,
+div#checkout_steps a {
+	color: @color_text;
+}
+
+div#checkout_steps a.active:before {
+	background-color: @color_header;
+}
+
 div#input_details {
 	border-radius: 0px 0px 0px 0px;
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
@@ -584,7 +593,7 @@ div#input_details {
 div#shipping_information h1 {
 	padding: 14px;
 	border-radius: 0px 0px 0px 0px;
-	background-color: @color_ac_blue;
+	background-color: @color_header;
 }
 
 div#input_details label span {
@@ -608,18 +617,18 @@ div#input_details label input {
 
 div#input_details label select {
 	padding: 14px;
-	width: 305px;
+	width: 308px;
 }
 
 div#input_details label select:focus, 
 div#input_details label input:focus {
-	border: 1px solid @color_ac_blue;
+	border: 1px solid @color_header;
 }
 
 div#input_details div.checkout_controls button {
 	border-radius: 0px;
 	border: none;
-	background-color: @color_ac_blue;
+	background-color: @color_header;
 	background-image: none;
 	box-shadow: 0px 0px 0px 0px;
 	text-shadow: none ;
