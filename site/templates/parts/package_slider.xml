@@ -2,9 +2,8 @@
 <!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
 <document>
 	<div class="'package '. $params['uid']" cms:eval="class">
-		<h2><cms:var param="name" multilanguage="yes"/></h2>
 		<cms:markdown param="description" multilanguage="yes"/>
-
+		
 		<a
 			href="url_Make('checkout', 'shop', array('package', $params['uid']))"
 			class="buy"
