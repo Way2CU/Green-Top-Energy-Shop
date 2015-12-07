@@ -277,6 +277,9 @@ section#package_details.industry article {
 /**
  * Egauge article
  */
+section#return, 
+section#shipping,
+section#warranty, 
 section#about_content, 
 section#downloads,
 section#videos,
@@ -309,6 +312,9 @@ section#package_features article {
 	background-image: none;
 }
 
+section#return article,
+section#shipping article, 
+section#warranty article, 
 section#about_content article,
 section#package_features article {
 	margin-left: auto;
@@ -316,6 +322,19 @@ section#package_features article {
 	width: 960px;
 	padding-right: 0%;
 }
+
+section#return article a,
+section#shipping article a, 
+section#warranty article a {
+	color: @color_header;
+	transition: all 0.3s;
+}
+
+section#return article a:hover,
+section#shipping article a:hover, 
+section#warranty article a:hover {
+	color: darken(@color_header,10%);
+} 
 
 section#eguage_details article.ethernet {
 	padding-bottom: 100px;
