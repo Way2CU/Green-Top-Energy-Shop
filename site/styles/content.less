@@ -326,6 +326,7 @@ section#package_features article {
 	background-image: none;
 }
 
+
 section#return article,
 section#shipping article, 
 section#warranty article, 
@@ -514,7 +515,7 @@ section#package_features > ul > li {
 	width: 33.3%;
 }
 
-section#package_features ul li svg,
+section#package_features > ul > li svg,
 section#features ul li svg {
 	display: block;
 	margin-left: auto;
@@ -524,11 +525,11 @@ section#features ul li svg {
 	height: 70px;
 }
 
-section#package_features ul li svg {
+section#package_features >  ul > li svg {
 	fill: @color_header;
 }
 
-section#package_features ul li h4 {
+section#package_features > ul > li  h4 {
 	min-height: 50px;
 }
 
@@ -537,15 +538,54 @@ section#features ul li h4 {
 	min-height: 100px;
 }
 
-section#package_features ul li p,
+section#package_features > ul > li p,
 section#features ul li p {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
-section#package_features ul li p {
+section#package_features > ul > li p {
 	padding-left: 30px;
 	padding-right: 30px;
+}
+
+section#package_features article.industry_system,
+section#package_features article.business_system {
+	margin-top: @vertical_spacing;
+	margin-bottom: @vertical_spacing;
+}
+
+section#package_features article.industry_system ul,
+section#package_features article.business_system ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+section#package_features article.industry_system ul li,
+section#package_features article.business_system ul li {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 30px;
+	width: 45%;
+}
+
+section#package_features article.industry_system ul li:nth-child(even),
+section#package_features article.business_system ul li:nth-child(even) {
+	margin-left: 5%;
+}
+
+section#package_features article.industry_system ul li h4,
+section#package_features article.business_system ul li h4 {
+	margin: 0px;
+	padding-bottom: 5px;
+}
+
+section#package_features article.industry_system ul li p,
+section#package_features article.business_system ul li  p {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 0px;
 }
 
 /*
