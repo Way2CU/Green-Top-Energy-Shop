@@ -1,0 +1,192 @@
+/**
+ * Header Mobile Style Sheet
+ * Green Top Energy Shop
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+header.mobile_title {
+	background-color: white;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+header.mobile_title a.menu {
+	position: absolute;
+	top: 50%;
+	margin-top: -2.5px;
+	left: 5px;
+	width: 35px;
+	height: 5px;
+	background-color: @color_features;
+	transition: all 0.3s;
+}
+
+header.mobile_title.visible a.menu {
+	background-color: inherit;
+}
+
+header.mobile_title.visible a.menu:before {
+	-webkit-transform: rotate(45deg);
+	 -moz-transform: rotate(45deg);
+	 -ms-transform: rotate(45deg);
+	 -o-transform: rotate(45deg);
+	 transform: tate(45deg);
+	 top: 0px;
+}
+
+header.mobile_title.visible a.menu:after {
+	-webkit-transform: rotate(-45deg);
+	 -moz-transform: rotate(-45deg);
+	 -ms-transform: rotate(-45deg);
+	 -o-transform: rotate(-45deg);
+	 transform: tate(-45deg);
+	 top: 0px;
+}
+
+header.mobile_title a.menu:before {
+	content: "";
+	position: absolute;
+	top: -10px;
+	left: 0%;
+	width: 35px;
+	height: 5px;
+	background-color: @color_features;
+	transition: all 0.3s;
+}
+
+header.mobile_title a.menu:after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 0%;
+	width: 35px;
+	height: 5px;
+	background-color: @color_features;
+	transition: all 0.3s;
+}
+
+header.mobile_title a.logo {
+	vertical-align: middle;
+}
+
+header.mobile_title a.logo img {
+	width: 163px;
+	height: 40px;
+}
+
+header.mobile_title a.phone {
+	position: absolute;
+	top: 50%;
+	margin-top: -17.5px;
+	right: 5px;
+	width: 35px;
+	height: 35px;
+}
+
+header.mobile_title a.phone svg {
+	display: block;
+	width: 35px;
+	height: 35px;
+	fill: @color_ac_green;
+}
+
+div.mobile_menu {
+	top: 52px;
+	width: 100%;
+	left: -400px;
+}
+
+nav#main {
+	vertical-align: middle;
+}
+
+nav#main ul {
+	padding: 0px;
+
+	list-style-type: none;
+	list-style-image: none;
+	line-height: 0;
+}
+
+nav#main > ul > li {
+	display: block;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid @color_text;
+	position: relative;
+}
+
+nav#main > ul > li > a {
+	display: block;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 1.2em;
+	padding-bottom: 1.2em;
+	text-decoration: none;
+	color: @color_header;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+
+nav#main > ul > li > a.login {
+	position: relative;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	color: @color_special;
+}
+
+nav#main > ul > li > a.login:before {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2.5em;
+	top: -100%;
+	left: 0;
+	content: '';
+}
+
+nav#main > ul > li > a.login svg {
+	display: inline-block;
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: middle;
+	margin-left: 10px;
+	fill: @color_special;
+	transition: all 0.3s;
+}
+
+nav#main > ul > li > a.login:hover svg {
+	fill: white;
+}
+
+nav#main > ul > li:hover > a {
+	background-color: @color_header;
+	color: @color_ac_text;
+}
+
+nav#main ul ul {
+	margin: 0px;
+	padding-left: 30px;
+}
+
+nav#main ul ul li {
+	display: block;
+	margin: 0px;
+}
+
+nav#main ul ul li a {
+	display: block;
+	text-decoration: none;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 5px;
+	padding-right: 5px;
+	line-height: 100%;
+	color: @color_header;
+	transition: all 0.3s;
+}
