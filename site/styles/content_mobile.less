@@ -427,21 +427,39 @@ section#video {
 	padding-bottom: 20px;
 }
 
-section#video img {
+section#videos div.video_wrap a.youtube.mobile img,
+section#video a.youtube.mobile img,
+section#video  img {
 	display: block;
 	margin-bottom: 40px;
 	width: 100%;
 	height: auto;
 }
 
-section#video iframe {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 95%;
-	height: auto;
+section#videos div.video_wrap a.youtube.mobile,
+section#video a.youtube.mobile {
+	display: inline-block;
+	cursor: pointer;
 	border: 1px solid @color_text;
 	box-shadow: 0px 0px 1px @color_text;
+}
+
+section#videos div.video_wrap a.youtube.mobile img,
+section#video a.youtube.mobile img {
+	margin-bottom: 0px;
+}
+
+section#videos div.video_wrap {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+
+section#videos div.video_wrap h4 {
+	display: block;
+	text-align: center;
 }
 
 /**
