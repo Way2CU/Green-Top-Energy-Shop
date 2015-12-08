@@ -58,13 +58,8 @@
 			</a>
 		</li>
 		<li>
-			<a
-				class="$section == 'about-us' ? 'active' : false"
-				href="url_Make('', 'about-us')"
-				cms:eval="href"
-				cms:optional="class"
-				>
-				<cms:text constant="menu_about_us"/>
+			<a href="javascript:void(0);">
+				<cms:text constant="menu_help"/>
 			</a>
 
 			<cms:template file="parts/policy_menu.xml"/>
