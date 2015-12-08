@@ -43,18 +43,30 @@
 					alt="report"
 					cms:eval="src"
 					/>
-				<cms:module
-					name="youtube"
-					action="show"
-					text_id="home_page_video"
-					embed="1"
-					width="550"
-					height="366"
-					theme="light"
-					autohide="0"
-					autoplay="0"
-					show_related="0"
-				/>
+				<cms:desktop>
+					<cms:module
+						name="youtube"
+						action="show"
+						text_id="home_page_video"
+						embed="1"
+						width="550"
+						height="366"
+						theme="light"
+						autohide="0"
+						autoplay="0"
+						show_related="0"
+						/>
+				</cms:desktop>
+
+				<cms:mobile>
+					<cms:module
+						name="youtube"
+						action="show"
+						text_id="home_page_video"
+						template="parts/video_mobile.xml"
+						/>
+				</cms:mobile>
+
 			</section>
 
 			<!-- Features -->

@@ -1,15 +1,31 @@
 <document>
-	<div class="video_wrap">
-		<h4><cms:var param="title" multilanguage="yes"/></h4>
-		<cms:module
-			name="youtube"
-			action="show"
-			id="$params['id']"
-			embed="1"
-			width="550"
-			height="366"
-			enable_api="1"
-			cms:eval="id"
-		/>	
-	</div>
+	<cms:desktop>
+		<div class="video_wrap">
+			<h4><cms:var param="title" multilanguage="yes"/></h4>
+			<cms:module
+				name="youtube"
+				action="show"
+				id="$params['id']"
+				embed="1"
+				width="550"
+				height="366"
+				enable_api="1"
+				cms:eval="id"
+			/>	
+		</div>
+	</cms:desktop>
+
+	<cms:mobile>
+		<div class="video_wrap">
+			<h4><cms:var param="title" multilanguage="yes"/></h4>
+			<cms:module
+				name="youtube"
+				action="show"
+				id="$params['id']"
+				template="parts/video_mobile.xml"
+				cms:eval="id"
+			/>	
+		</div>
+	</cms:mobile>
+
 </document>
