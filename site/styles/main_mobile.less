@@ -1,0 +1,62 @@
+/**
+ * Main Mobile Style Sheet
+ * GreenTopEnergy
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Mladen Mijatov
+ */
+
+
+@color_ac_blue: #2a4191;
+@color_ac_green: #51ae43;
+@color_ac_orange: #ea7a06;
+@color_ac_red: #ca2424;
+@color_ac_text: white;
+
+@color_features: #34495e;
+@color_features_text: white;
+@color_header: #1e477a;
+@color_special: #5cc3d9;
+@color_header_title: #f0c30e;
+@color_text: #7f8c8d;
+
+@vertical_spacing: 50px;
+@small_vertical_spacing: 30px;
+@button_border_radius: 5px;
+@package_content_width: 550px;
+
+@import "content_mobile.less";
+@import "footer_mobile.less";
+
+
+
+@import (css) "stock/header.css";
+@import (css) "stock/copyright.css";
+
+
+body {
+	padding-top: 70px;
+	background-color: white;
+
+	color: @color_text;
+	font-family: Ubuntu;
+	font-weight: 400;
+}
+
+input,
+select,
+textarea,
+button {
+	font-family: Ubuntu;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: @color_header;
+	font-family: Ultra;
+	font-weight: 400;
+}

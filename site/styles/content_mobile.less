@@ -1,0 +1,578 @@
+/**
+ * Main Mobile Style Sheet
+ * Green Top Energy Shop
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+ /**
+ * Packages
+ */
+section#packages {
+	position: relative;
+	min-height: 600px;
+	text-align: center;	
+}
+
+section#package_details,
+section#packages div.package {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 550px;
+
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100% auto;
+
+	padding-top: 50px;
+
+	color: @color_ac_text;
+	opacity: 0;
+	visibility: hidden;
+
+	transition: 0.5s opacity, 0s visibility;
+	transition-delay: 0s, 0.5s;
+}
+
+section#about,
+section#title_documentation,
+section#title_video,
+section#about_egauge,
+section#package_details {
+	display: block;
+	text-align: center;
+	position: relative;
+	padding-top: 240px;
+	padding-right: 0px;
+	background-position: center top;
+	background-size: 100% auto;
+	background-repeat:  no-repeat;
+	opacity: 1;
+	visibility: visible;
+	min-height: 500px;
+}
+
+section#about,
+section#title_documentation,
+section#title_video,
+section#about_egauge {
+	padding-top: 220px;
+	padding-bottom: 20px;
+	background-size: 100% auto;
+	min-height: 0px;
+}
+
+section#packages div.package.visible {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0s, 0s;
+}
+
+section#package_details.basic,
+section#packages div.package.basic {
+	background-color: @color_ac_blue;
+	background-image: url(../images/slides/basic.jpg);
+}
+
+section#package_details.renewable,
+section#packages div.package.renewable {
+	background-color: @color_ac_green;
+	background-image: url(../images/slides/renewable-energy.jpg);
+}
+
+section#package_details.business,
+section#packages div.package.business {
+	background-color: @color_ac_red;
+	background-image: url(../images/slides/small-business.jpg);
+}
+
+section#package_details.industry,
+section#packages div.package.industry {
+	background-color: @color_ac_orange;
+	background-image: url(../images/slides/business-light-industrial.jpg);
+}
+
+section#about_egauge {
+	background-image: url(../images/eguage-header.jpg);
+	background-color: @color_ac_blue;
+}
+
+section#title_video {
+	background-image: url(../images/video-background.jpg);
+	background-color: black;
+}
+
+section#title_documentation {
+	background-image: url(../images/documentation-background.jpg);
+	background-color: @color_ac_blue;
+}
+
+section#about {
+	background-image: url(../images/blog-background.jpg);
+	background-color: @color_ac_blue;
+}
+
+section#about h2,
+section#title_documentation h2,
+section#title_video h2,
+section#about_egauge h2,
+section#package_details h2,
+section#packages div.package h2 {
+	color: @color_ac_text;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+section#package_details p,
+section#packages div.package p {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section#package_features a.buy,
+section#package_details a.buy,
+section#packages div.package a.buy {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	padding: 1em;
+	padding-bottom: 0.7em;
+
+	border-radius: @button_border_radius;
+	border: 1px solid @color_ac_text;
+	background-color: @color_ac_text;
+
+	color: @color_header;
+	font-weight: 700;
+	line-height: 100%;
+	text-decoration: none;
+
+	transition: all 0.3s;
+}
+
+section#package_features a.buy {
+	border: 1px solid @color_ac_blue;
+	margin-left: 0px;
+}
+
+section#package_features.renewable a.buy {
+	color: @color_ac_green;
+	border: 1px solid @color_ac_green;
+}
+
+section#package_features.business a.buy {
+	color: @color_ac_red;
+	border: 1px solid @color_ac_red;
+}
+
+section#package_features.industry a.buy {
+	color: @color_ac_orange;
+	border: 1px solid @color_ac_orange;
+}
+
+section#package_details a.buy:hover,
+section#packages div.package a.buy:hover {
+	background-color:  @color_ac_green;
+	color: @color_ac_text ;
+}
+
+section#package_features a.buy svg,
+section#package_details a.buy svg,
+section#packages div.package a.buy svg {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 1.5em;
+	height: 1.5em;
+	fill: currentColor;
+	margin-top: -0.3em;
+}
+
+section#package_features.basic a.buy:hover,
+section#package_features a.buy:hover,
+section#package_details.basic a.buy:hover,
+section#packages div.package.basic a.buy:hover {
+	background-color: darken(@color_ac_blue, 10%);
+}
+
+section#package_features a.buy:hover {
+	color: @color_ac_text;
+}
+
+section#package_features.renewable a.buy:hover,
+section#package_details.renewable a.buy:hover,
+section#packages div.package.renewable a.buy:hover {
+	background-color: darken(@color_ac_green, 10%);
+}
+
+section#package_features.business a.buy:hover,
+section#package_details.business a.buy:hover,
+section#packages div.package.business a.buy:hover {
+	background-color: darken(@color_ac_red, 10%);
+}
+
+section#package_features.industry a.buy:hover,
+section#package_details.industry a.buy:hover,
+section#packages div.package.industry a.buy:hover {
+	background-color: darken(@color_ac_orange, 10%);
+}
+
+section#packages div.controls {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -69px;
+}
+
+section#packages div.controls a {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 25px;
+	height: 25px;
+	border: 2px solid @color_ac_text;
+	border-radius: 50%;
+	transition: 0.3s all;
+	cursor: pointer;
+}
+
+section#packages div.controls a.active {
+	background-color: @color_ac_text;
+}
+
+section#package_details article {
+	display: block;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-image: url(../images/basic_detail.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 100% auto;
+	min-height: 610px;
+}
+
+section#package_details.basic article {
+	background-image: url(../images/basic_detail.jpg);
+	background-color: lighten(@color_ac_blue, 10%);
+}
+
+section#package_details.renewable article {
+	background-image: url(../images/renewable_detail.jpg);
+	background-color: darken(@color_ac_green, 10%);
+}
+
+section#package_details.business article {
+	background-image: url(../images/business_detail.jpg);
+	background-color: darken(@color_ac_red, 10%);
+}
+
+section#package_details.industry article {
+	background-image: url(../images/industry_detail.jpg);
+	background-color: darken(@color_ac_orange, 10%);
+}
+
+/**
+ * Egauge article
+ */
+section#return, 
+section#shipping,
+section#warranty, 
+section#about_content, 
+section#downloads,
+section#videos,
+section#eguage_details,
+section#egauge {
+	display: block;
+	padding-top: 20px;
+}
+
+section#downloads,
+section#videos,
+section#eguage_details {
+	text-align: center;
+}
+
+section#package_features article,
+section#eguage_details article.ethernet,
+section#egauge article {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 760px;
+	background-image: url(../images/eg3000.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 70% auto;
+	width: 95%;
+}
+
+section#about_content article,
+section#eguage_details article,
+section#package_features article {
+	text-align: left;
+	background-image: none;
+	min-height: 0px;
+}
+
+section#return article,
+section#shipping article, 
+section#warranty article, 
+section#about_content article,
+section#package_features article {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	padding-right: 0%;
+}
+
+section#return article a,
+section#shipping article a, 
+section#warranty article a {
+	color: @color_header;
+	transition: all 0.3s;
+}
+
+section#return article a:hover,
+section#shipping article a:hover, 
+section#warranty article a:hover {
+	color: darken(@color_header,10%);
+} 
+
+section#eguage_details article.ethernet {
+	min-height: 550px;
+	margin-bottom: 50px;
+}
+
+section#eguage_details article.specification,
+section#eguage_details article.eguage_features {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	width: 95%;
+	border: 1px solid lighten(@color_text,40%);
+}
+
+section#eguage_details article.specification {
+	margin-bottom: 0px;
+}
+
+section#eguage_details article.specification h2,
+section#eguage_details article.eguage_features h2 {
+	text-align: center;
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: @color_ac_text ;
+	background-color: @color_header_title;
+}
+
+section#about_content article h2 {
+	margin-top: 0px;
+}
+
+section#eguage_details article.specification li {
+	padding-bottom: 10px;
+}
+
+section#eguage_details article.eguage_features table {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+}
+
+section#eguage_details article.eguage_features table tr td {
+	width: 50%;
+}
+
+section#egauge a.button_more {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	line-height: 3em;
+	margin-top: 1em;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-weight: 700;
+	color: @color_header;
+	background-color: @color_ac_text;
+	border: 1px solid @color_header;
+	border-radius: @button_border_radius;
+	transition: all 0.3s;
+}
+
+section#egauge a.button_more:hover {
+	background-color:  @color_ac_green;
+	color: @color_ac_text ;
+}
+
+/**
+ * Video section
+ */
+section#video {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+section#video img {
+	display: block;
+	margin-bottom: 40px;
+	width: 100%;
+	height: auto;
+}
+
+section#video iframe {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	height: auto;
+	border: 1px solid @color_text;
+	box-shadow: 0px 0px 1px @color_text;
+}
+
+/**
+ * Features
+ */
+section#package_features,
+section#features {
+	background-color: @color_features;
+	color: @color_features_text;
+	text-align:  center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+section#package_features {
+	background-color: @color_ac_text;
+	color: @color_text;
+}
+
+section#package_features h2 {
+	margin-top: 0px;
+}
+
+section#features h2,
+section#features h4 {
+	color: @color_ac_text;
+}
+
+section#package_features > ul,
+section#features > ul {
+	margin: 0px;
+	padding: 0px;
+	margin-top: 60px;
+	list-style-type: none;
+}
+
+section#package_features > ul > li,
+section#features ul li {
+	display: block;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+
+section#package_features > ul > li svg,
+section#features ul li svg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	fill: white;
+	width: 70px;
+	height: 70px;
+}
+
+section#package_features >  ul > li svg {
+	fill: @color_header;
+}
+
+section#features ul li h4 {
+	color: @color_ac_text;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+}
+
+section#package_features > ul > li p,
+section#features ul li p {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+}
+
+section#package_features article.industry_system,
+section#package_features article.business_system {
+	margin-top: @vertical_spacing;
+	margin-bottom: @vertical_spacing;
+}
+
+section#package_features article.industry_system ul,
+section#package_features article.business_system ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+section#package_features article.industry_system ul li,
+section#package_features article.business_system ul li {
+	display: block;
+	margin-bottom: 30px;
+}
+
+
+section#package_features article.industry_system ul li h4,
+section#package_features article.business_system ul li h4 {
+	margin: 0px;
+	padding-bottom: 5px;
+}
+
+section#package_features article.industry_system ul li p,
+section#package_features article.business_system ul li  p {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 0px;
+}
+
+/*
+  Download links
+*/
+
+section#downloads a {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	text-decoration: none;
+	border: 1px solid lighten(@color_text,40%);
+	width: 95%;
+}
+
+section#downloads a img {
+	display: block;
+	margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70px;
+	height: 70px;
+}
+
+section#downloads a p {
+	color: @color_text;
+}
+
+
+
+
