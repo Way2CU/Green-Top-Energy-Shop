@@ -99,10 +99,12 @@ div.mobile_menu {
 	top: 52px;
 	width: 100%;
 	left: -400px;
+	overflow-y: auto; 
 }
 
 nav#main {
 	vertical-align: middle;
+	padding-bottom: 5em;
 }
 
 nav#main ul {
@@ -120,6 +122,7 @@ nav#main > ul > li {
 	position: relative;
 }
 
+nav#main ul ul li a,
 nav#main > ul > li > a {
 	display: block;
 	padding-left: 10px;
@@ -177,16 +180,4 @@ nav#main ul ul {
 nav#main ul ul li {
 	display: block;
 	margin: 0px;
-}
-
-nav#main ul ul li a {
-	display: block;
-	text-decoration: none;
-	padding-top: 7px;
-	padding-bottom: 7px;
-	padding-left: 5px;
-	padding-right: 5px;
-	line-height: 100%;
-	color: @color_header;
-	transition: all 0.3s;
 }
