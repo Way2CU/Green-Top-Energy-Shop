@@ -1,0 +1,14 @@
+<document>
+	<a
+		class="youtube mobile"
+		href="'http://www.youtube.com/watch?v='.$params['video_id']"
+		title="$params['title'][$language]"
+		cms:eval="href,title"
+		>
+		<img
+			src="$params['thumbnail']"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+		/>
+	</a>
+</document>
