@@ -5,7 +5,7 @@
 	<html lang="$language" cms:eval="lang">
 		<head>
 			<title><cms:text constant="site_title"/><cms:raw text=" - "/><cms:text constant="warrenty_page_label"/></title>
-			<link href='https://fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
+			<link href='//fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
 			<cms:collection include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
