@@ -685,3 +685,59 @@ div#input_details div.checkout_controls button {
 div#input_details div.checkout_controls button:hover {
 	background-color: lighten(@color_ac_blue, 10%);
 }
+
+/**
+ * Contact form
+ */
+section#contact {
+	display: block;
+	padding: @vertical_spacing calc(~'(100% - 1200px) / 2');
+}
+
+section#contact form label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+section#contact form label span {
+	display: block;
+	margin-bottom: 2px;
+}
+
+section#contact form label input,
+section#contact form label select,
+section#contact form label textarea {
+	padding: 5px;
+
+	border: 1px solid @color_text;
+	border-right-color: lighten(@color_text, 20%);
+	border-bottom-color: lighten(@color_text, 20%);
+	background-color: white;
+
+	resize: none;
+	color: @color_text;
+	transition: all 0.3s;
+}
+
+section#contact form label input:focus,
+section#contact form label select:focus,
+section#contact form label textarea:focus {
+	color: @color_header;
+}
+
+section#contact form button {
+	margin-right: 5px;
+	padding: 10px 30px;
+
+	border: 1px solid @color_ac_blue;
+	border-radius: @button_border_radius;
+	background-color: @color_ac_text;
+
+	color: @color_ac_blue;
+	transition: all 0.3s;
+}
+
+section#contact form button:hover {
+	background-color: @color_ac_blue;
+	color: @color_ac_text;
+}

@@ -18,6 +18,10 @@
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
 
+			<section id="about">
+				<h2><cms:text constant="title_about"/></h2>
+			</section>
+
 			<section id="contact">
 				<cms:module
 					name="contact_form"

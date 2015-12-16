@@ -43,8 +43,10 @@
 		</language>
 	</section>
 	<section name="contact-us">
-		<language name="_default" file="contact_us.xml"/>
-		<language name="service" file="service_contact.xml"/>
-		<language name="installation" file="installation_contact.xml"/>
+		<language name="all">
+			<action name="_default" file="contact.xml"/>
+			<action name="service" file="service_contact.xml"/>
+			<action name="installation" file="installation_contact.xml"/>
+		</language>
 	</section>
 </document>
