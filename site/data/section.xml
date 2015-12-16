@@ -42,7 +42,9 @@
 			<action name="terms-of-use" file="terms.xml"/>
 		</language>
 	</section>
-	<section name="contact">
-		<language name="all" file="contact_us.xml"/>
+	<section name="contact-us">
+		<language name="_default" file="contact_us.xml"/>
+		<language name="service" file="service_contact.xml"/>
+		<language name="installation" file="installation_contact.xml"/>
 	</section>
 </document>
