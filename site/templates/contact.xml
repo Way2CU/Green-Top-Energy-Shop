@@ -4,27 +4,30 @@
 	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" cms:eval="lang">
 		<head>
-			<title><cms:text constant="site_title"/><cms:raw text=" - "/><cms:text constant="about_page_label"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="menu_contact_us"/>
+			</title>
+
 			<link href='//fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
-			<cms:collection include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
-			
+
 			<section id="about">
 				<h2><cms:text constant="title_about"/></h2>
 			</section>
-			
-			<section id="about_content">
+
+			<section id="contact">
 				<cms:module
-					name="articles"
+					name="contact_form"
 					action="show"
-					text_id="about_us"
-					template="parts/basic_article.xml"
-					/>		
+					text_id="contact"
+				/>
 			</section>
 
 			<!-- Footer -->

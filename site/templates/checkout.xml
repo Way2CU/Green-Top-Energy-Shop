@@ -10,7 +10,7 @@
 				<cms:text constant="checkout" module="shop"/>
 			</title>
 
-			<link href='https://fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
+			<link href='//fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
 			<cms:module name="shop" action="include_scripts"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
