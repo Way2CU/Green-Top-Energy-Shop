@@ -13,6 +13,8 @@
 	<module name="contact_form" order="4" preload="no"/>
 	<module name="country_list" order="5" preload="no"/>
 	<module name="paypal" order="6" preload="no"/>
+	<module name="downloads" order="7" preload="no"/>
+	<module name="youtube" order="8" preload="no"/>
 
 	<user
 		fullname="Administrator"
