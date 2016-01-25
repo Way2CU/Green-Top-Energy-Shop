@@ -1,12 +1,12 @@
 ---
 site:
-  domain: sample.com
+  domain: energyportal.co.il
   # subdomain: test
   make_alias: false
   root: httpdocs
-  username: sample
+  username: energy_manager
   caracal_branch: develop
-  # ip_address: 0.0.0.0
+  ip_address: 198.251.79.73
   # owner: Some Person
   # plan: Unlimited
   # database_type: 'mysql'
