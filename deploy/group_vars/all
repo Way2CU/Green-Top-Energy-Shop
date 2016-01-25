@@ -1,12 +1,12 @@
 ---
 site:
-  domain: energyportal.co.il
+  domain: greentopsenergy.com
   # subdomain: test
   make_alias: false
   root: httpdocs
-  username: energy_manager
+  username: green_top
   caracal_branch: develop
-  ip_address: 198.251.79.73
+  # ip_address: 198.251.79.73
   # owner: Some Person
   # plan: Unlimited
   # database_type: 'mysql'
