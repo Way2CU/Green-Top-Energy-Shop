@@ -686,6 +686,56 @@ div#input_details div.checkout_controls button:hover {
 	background-color: lighten(@color_ac_blue, 10%);
 }
 
+div#current_selection  label input[type="checkbox"] {
+	display: none;
+}
+
+div#current_selection  label input[type="checkbox"]:checked ~ span:after {
+	transform: scale(1);
+}
+
+div#current_selection label {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+div#current_selection label  span{
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100px
+}
+
+div#current_selection label span:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -12.5px;
+	left: 100%;
+	width: 25px;
+	height: 25px; 
+	border: 1px solid @color_ac_blue;
+}
+
+div#current_selection label span:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -12.5px;
+	left: 100%;
+	width: 25px;
+	height: 25px; 
+	
+	background-image: url(../images/check_mark_white.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 20px 20px;
+
+	transform: scale(0);
+	transition: all 0.3s;
+}
+
+
 /**
  * Contact form
  */
