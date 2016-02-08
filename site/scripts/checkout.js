@@ -121,6 +121,7 @@ Site.CheckoutPages = function() {
 			var value = values[index];
 			var label = $('<label>');
 			var input = $('<input>');
+			var span = $('<span>');
 
 			// configure checkbox
 			input
@@ -128,9 +129,11 @@ Site.CheckoutPages = function() {
 				.data('value', value)
 				.on('toggle', self.handler.current_checkbox_toggle);
 
+			span.text(value);
+
 			label
-				.text(value)
-				.prepend(input)
+				.append(input)
+				.append(span)
 				.appendTo(self.current_selection_page.find('div.container'));
 		}
 	};
