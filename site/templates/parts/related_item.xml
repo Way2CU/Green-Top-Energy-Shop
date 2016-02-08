@@ -17,6 +17,20 @@
 		<span class="price"><cms:var param="price"/></span>
 		<span class="count"/>
 		<div class="item_controls">
+			<a
+				href="javascript: void(0);"
+				onclick="'Site.checkout_pages.increase_related_count(\'' + $params['uid'] + '\');'"
+				cms:eval="onclick"
+				>
+				<cms:raw text="+"/>
+			</a>
+			<a
+				href="javascript: void(0);"
+				onclick="'Site.checkout_pages.decrease_related_count(\'' + $params['uid'] + '\');'"
+				cms:eval="onclick"
+				>
+				<cms:raw text="-"/>
+			</a>
 		</div>
 	</div>
 </document>

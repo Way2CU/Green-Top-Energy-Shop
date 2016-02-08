@@ -139,6 +139,22 @@ Site.CheckoutPages = function() {
 	};
 
 	/**
+	 * Increase related item count.
+	 *
+	 * @param string uid
+	 */
+	self.increase_related_count = function(uid) {
+	};
+
+	/**
+	 * Decrease related item count.
+	 *
+	 * @param string uid
+	 */
+	self.decrease_related_count = function(uid) {
+	};
+
+	/**
 	 * Handle loading current data from the server.
 	 *
 	 * @param object data
