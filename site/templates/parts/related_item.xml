@@ -6,13 +6,13 @@
 		data-uid="$params['uid']"
 		cms:eval="data-uid"
 		>
-		<sprite>
+		<figure>
 			<img
 				src="gallery::getGroupThumbnailById($params['gallery'])"
 				alt="$params['name'][$language]"
 				cms:eval="src,alt"
 				/>
-		</sprite>
+		</figure>
 		<span class="title"><cms:var param="name" multilanguage="yes"/></span>
 		<span class="price"><cms:var param="price"/></span>
 		<span class="count"/>
