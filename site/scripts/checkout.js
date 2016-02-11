@@ -143,7 +143,8 @@ Site.CheckoutPages = function() {
 	 *
 	 * @param string uid
 	 */
-	self.increase_related_count = function(uid) {
+	self.increase_related_count = function(cid) {
+		self.cart.alter_item_count_by_cid(cid, 1);
 	};
 
 	/**
@@ -151,7 +152,8 @@ Site.CheckoutPages = function() {
 	 *
 	 * @param string uid
 	 */
-	self.decrease_related_count = function(uid) {
+	self.decrease_related_count = function(cid) {
+		self.cart.alter_item_count_by_cid(cid, -1);
 	};
 
 	/**
