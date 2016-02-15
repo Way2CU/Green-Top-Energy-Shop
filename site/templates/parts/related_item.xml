@@ -3,8 +3,8 @@
 <document>
 	<div
 		class="related_item"
-		data-uid="$params['uid']"
-		cms:eval="data-uid"
+		data-cid="$params['cid']"
+		cms:eval="data-cid"
 		>
 		<figure>
 			<img
@@ -17,20 +17,8 @@
 		<span class="price"><cms:var param="price"/></span>
 		<span class="count"/>
 		<div class="item_controls">
-			<a
-				href="javascript: void(0);"
-				onclick="'Site.checkout_pages.increase_related_count(\'' + $params['uid'] + '\');'"
-				cms:eval="onclick"
-				>
-				<cms:raw text="+"/>
-			</a>
-			<a
-				href="javascript: void(0);"
-				onclick="'Site.checkout_pages.decrease_related_count(\'' + $params['uid'] + '\');'"
-				cms:eval="onclick"
-				>
-				<cms:raw text="-"/>
-			</a>
+			<a data-amount="1"><cms:raw text="+"/></a>
+			<a data-amount="-1"><cms:raw text="-"/></a>
 		</div>
 	</div>
 </document>

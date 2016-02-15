@@ -16,6 +16,7 @@ Site.CartItemView = function(item) {
 	self.item = item;
 	self.container = null;
 	self.count_label = null;
+	self.invalid_item = false;
 
 	/**
 	 * Complete object initialization.
@@ -28,24 +29,41 @@ Site.CartItemView = function(item) {
 	 * been set.
 	 */
 	self._init_user_interface = function() {
-		self.container = $('div.related_item[data-uid="' + self.item.uid + '"]');
-		self.count_label = self.container.find('span.count');
+		// make sure we don't look for container more than once
+		if (self.container !== null || self.invalid_item)
+			return;
+
+		// find item container
+		var cid = self.item.uid + '/' + self.item.variation_id;
+		self.container = $('div.related_item[data-cid="' + cid + '"]');
+
+		if (self.container.length > 0) {
+			// find labels
+			self.count_label = self.container.find('span.count');
+
+		} else {
+			// mark item as invalid so it's not updated in the future
+			self.invalid_item = true;
+		}
 	};
 
 	/**
 	 * Handler externally called when item count has changed.
 	 */
 	self.handle_change = function() {
-		if (self.container === null)
-			self._init_user_interface();
+		// create interface if needed
+		self._init_user_interface();
 
+		// skip updating invalid items
+		if (self.invalid_item)
+			return;
+
+		// update item count display
 		self.count_label.text(self.item.count);
 	};
 
 	/**
-	 * Handle shopping cart currency change.
-	 *
-	 * @param string currency
+	 * Handle shopping cart currency change.  * * @param string currency
 	 * @param float rate
 	 */
 	self.handle_currency_change = function(currency, rate) {
@@ -55,7 +73,7 @@ Site.CartItemView = function(item) {
 	 * Handler externally called before item removal.
 	 */
 	self.handle_remove = function() {
-		self.count_label.text('0');
+		self.count_label.text('');
 	};
 
 	// finalize object
@@ -71,6 +89,7 @@ Site.CheckoutPages = function() {
 	self.property = null;
 	self.currents = new Array();
 	self.cart = null;
+	self.package_name = null;
 
 	self.validator = {};
 	self.handler = {};
@@ -91,17 +110,38 @@ Site.CheckoutPages = function() {
 		self.cart = new Caracal.Shop.Cart();
 		self.cart.add_item_view(Site.CartItemView);
 
-		// load current
+		// connect all control events
+		$('div.item_controls a').on('click', self.handler.control_click);
+
+		// get package name from location
+		self.package_name = window.location.pathname.split('/').pop();
+
+		// load electrict current
 		self._load_current();
+
+		// add package to the cart
+		self._set_cart_content();
+	};
+
+	/**
+	 * Set content of shopping cart to package with specified name.
+	 */
+	self._set_cart_content = function() {
+		var data = {
+				uid: self.package_name,
+				count: 1
+			};
+
+		new Communicator('shop')
+			.send('json_set_item_as_cart', data);
 	};
 
 	/**
 	 * Load current selection data from the server.
 	 */
 	self._load_current = function() {
-		var item_id = window.location.pathname.split('/').pop();
 		var data = {
-				item_uid: item_id,
+				item_uid: self.package_name,
 				text_id: 'currents'
 			};
 
@@ -127,7 +167,7 @@ Site.CheckoutPages = function() {
 			input
 				.attr('type', 'checkbox')
 				.data('value', value)
-				.on('toggle', self.handler.current_checkbox_toggle);
+				.on('click', self.handler.current_checkbox_click);
 
 			span.text(value);
 
@@ -139,21 +179,20 @@ Site.CheckoutPages = function() {
 	};
 
 	/**
-	 * Increase related item count.
+	 * Increase or decrease related item count.
 	 *
-	 * @param string uid
+	 * @param integer amount
 	 */
-	self.increase_related_count = function(cid) {
-		self.cart.alter_item_count_by_cid(cid, 1);
-	};
+	self.handler.control_click = function(event) {
+		var control = $(this);
+		var cid = control.closest('div.related_item').data('cid');
+		var amount = control.data('amount');
 
-	/**
-	 * Decrease related item count.
-	 *
-	 * @param string uid
-	 */
-	self.decrease_related_count = function(cid) {
-		self.cart.alter_item_count_by_cid(cid, -1);
+		// prevent default link behavior
+		event.preventDefault();
+
+		// increase count
+		self.cart.alter_item_count_by_cid(cid, amount);
 	};
 
 	/**
@@ -180,22 +219,25 @@ Site.CheckoutPages = function() {
 	 * @param string error_description
 	 */
 	self.handler.current_load_error = function(xhr, transfer_status, error_description) {
+		alert('Error loading electric current selection menu. Reload the page and try again!');
 	};
 
 	/**
-	 * Handle toggling current selection.
+	 * Handle clicking electric current selection.
 	 *
 	 * @param object event
 	 */
-	self.handler.current_checkbox_toggle = function(event) {
+	self.handler.current_checkbox_click = function(event) {
+		var input = $(this);
+
 		// prevent selecting more than three
-		if (self.currents.length == 3) {
+		if (self.currents.length == 3 && input.is(':checked')) {
 			event.preventDefault();
+			event.stopPropagation();
 			return;
 		}
 
 		// update current selection array
-		var input = $(this);
 		var value = input.data('value');
 		var index = self.currents.indexOf(value);
 
@@ -212,7 +254,7 @@ Site.CheckoutPages = function() {
 	 *
 	 * @return boolean
 	 */
-	self.validator.current_selection_page = function(params) {
+	self.validator.current_selection_page = function() {
 		// we require at least one current to be selected
 		var result = self.currents.length > 0;
 
@@ -234,9 +276,9 @@ Site.CheckoutPages = function() {
 	/**
 	 * Validate proper selection of related products on checkout page.
 	 *
-	 * @retun boolean
+	 * @return boolean
 	 */
-	self.validator.related_items_page = function(params) {
+	self.validator.related_items_page = function() {
 		return true;
 	};
 
@@ -245,5 +287,7 @@ Site.CheckoutPages = function() {
 }
 
 $(function() {
-	Site.checkout_pages = new Site.CheckoutPages();
+	// create checkout pages only if form is present
+	if ($('div#input_details form').length > 0)
+		Site.checkout_pages = new Site.CheckoutPages();
 });

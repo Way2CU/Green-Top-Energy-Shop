@@ -66,6 +66,9 @@ Site.on_load = function() {
 	Site.package_slider = new PageControl('section#packages', 'div.package');
 	Site.package_slider
 		.attachControls('section#packages div.controls a');
+
+	// connect checkout buttons
+	$('div.package a.buy').on('click', Site.handle_checkout_click);
 };
 
 

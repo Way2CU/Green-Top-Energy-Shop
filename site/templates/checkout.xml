@@ -24,13 +24,6 @@
 			<!-- Configure checkout -->
 			<cms:module
 				name="shop"
-				action="set_item_as_cart"
-				uid="fix_chars($_REQUEST['package'])"
-				count="1"
-				cms:eval="uid"
-				/>
-			<cms:module
-				name="shop"
 				action="set_terms"
 				link="url_Make('terms-of-use', 'help')"
 				cms:eval="link"
