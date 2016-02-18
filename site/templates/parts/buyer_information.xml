@@ -559,6 +559,11 @@
 							text_id="current_selection"
 							/>
 						<div class="container"/>
+						<div class="total">
+							<cms:text constant="label_total"/>
+							<span/>
+						</div>
+
 						<div class="checkout_controls">
 							<button class="previous"><cms:text constant="back"/></button>
 							<button class="next"><cms:text constant="next"/></button>

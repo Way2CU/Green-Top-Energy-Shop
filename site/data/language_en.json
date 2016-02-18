@@ -40,5 +40,6 @@
 	"title_documentation": "A title about documentation",
 	"title_about": "About us",
 	"title_related_products": "Related products",
-	"title_current_selection": "Current selection"
+	"title_current_selection": "Current selection",
+	"label_total": "Selected options:"
 }
