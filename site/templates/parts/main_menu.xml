@@ -100,15 +100,49 @@
 				</ul>
 			</cms:user>
 		</li>
-		<li>
-			<a class="login" href="#"><cms:text constant="menu_login"/>
-				<svg>
-					<use
-						href="#icon-system"
-						xlink:href="site/images/site-sprite.svg#icon-system"
-						/>
-				</svg>
-			</a>
-		</li>
+		<cms:guest>
+			<li>
+				<a class="sign-up" href="#"><cms:text constant="menu_signup"/>
+					<svg>
+						<use
+							href="#icon-key"
+							xlink:href="site/images/site-sprite.svg#icon-key"
+							/>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="login" href="#"><cms:text constant="menu_login"/>
+					<svg>
+						<use
+							href="#icon-system"
+							xlink:href="site/images/site-sprite.svg#icon-system"
+							/>
+					</svg>
+				</a>
+			</li>
+		</cms:guest>
+
+		<cms:user>
+			<li>
+				<a
+					class="control_panel"
+					href="url_Make('', 'user')"
+					cms:eval="href"
+					>
+					<cms:text constant="menu_account"/>
+				</a>
+			</li>
+			<li>
+				<a class="logout" href="#"><cms:text constant="menu_logout"/>
+					<svg>
+						<use
+							href="#icon-system"
+							xlink:href="site/images/site-sprite.svg#icon-system"
+							/>
+					</svg>
+				</a>
+			</li>
+		</cms:user>
 	</ul>
 </document>

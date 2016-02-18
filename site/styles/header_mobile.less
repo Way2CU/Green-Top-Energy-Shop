@@ -136,6 +136,9 @@ nav#main > ul > li > a {
 	transition: all 0.3s;
 }
 
+nav#main > ul > li > a.control_panel,
+nav#main > ul > li > a.logout,
+nav#main > ul > li > a.sign-up,
 nav#main > ul > li > a.login {
 	position: relative;
 	padding-top: 0.5em;
@@ -143,6 +146,9 @@ nav#main > ul > li > a.login {
 	color: @color_special;
 }
 
+nav#main > ul > li > a.control_panel:before,
+nav#main > ul > li > a.logout:before,
+nav#main > ul > li > a.sign-up:before,
 nav#main > ul > li > a.login:before {
 	display: block;
 	position: absolute;
@@ -153,6 +159,9 @@ nav#main > ul > li > a.login:before {
 	content: '';
 }
 
+nav#main > ul > li > a.control_panel svg,
+nav#main > ul > li > a.logout svg,
+nav#main > ul > li > a.sign-up svg,
 nav#main > ul > li > a.login svg {
 	display: inline-block;
 	width: 1.5em;
@@ -163,6 +172,9 @@ nav#main > ul > li > a.login svg {
 	transition: all 0.3s;
 }
 
+nav#main > ul > li > a.control_panel:hover svg,
+nav#main > ul > li > a.logout:hover  svg,
+nav#main > ul > li > a.sign-up:hover svg,
 nav#main > ul > li > a.login:hover svg {
 	fill: white;
 }

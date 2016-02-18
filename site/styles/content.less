@@ -843,3 +843,194 @@ div#related_products div.related_item div.item_controls a {
 	padding-right: 5px;
 	font-size: 1.5em;
 }
+
+/**
+ * Dialogs
+ */
+div.dialog {
+	display: block;
+	position: fixed;
+	max-height:  0px;
+	top: 0px;
+	left: 50%;
+	background-color: white;
+	z-index: 100001;
+	color: @color_text;
+	overflow: hidden;
+	transition: all 0.6s;
+}
+
+div.dialog.visible {
+	top: 0px;
+	max-height: 650px;
+}
+
+div.dialog div.title {
+	background-color: @color_ac_blue;
+}
+
+div.dialog div.content p {
+	margin-top: 0;
+}
+
+div.dialog div.content div.inner_content {
+	padding: 20px;
+}
+
+div.dialog div.content form label {
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+	position: relative;
+	cursor: pointer;
+}
+
+div.dialog div.content form label span {
+	display: inline-block;
+	text-align: left;
+	padding-left: 5px;
+	width: 300px;
+	position: relative;
+}
+
+div.dialog.login div.content form label span:before {
+	content: ' ';
+	position: absolute;
+	right: 100%;
+	top: 50%;
+	margin-top: -13.5px;
+	width: 25px;
+	height: 25px;
+	display: block;
+	background: white;
+	border: 1px solid @color_ac_blue;
+}
+
+
+div.dialog.login div.content form label span:after {
+	content: ' ';
+	position: absolute;
+	right: 100.5%;
+	top: 50%;
+	margin-top: -12.5px;
+	width: 25px;
+	height: 25px;
+	display: block;
+	z-index: 1;
+	background: url(../images/check_mark_white.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-ms-transition: all .2s ease;
+	-webkit-transition: all .2s ease;
+	transition: all .3s ease;
+	-ms-transform: scale(0);
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	opacity: 1;	
+}
+
+div.dialog.login div.content form input[type=checkbox] {
+	display: none;
+}
+
+div.dialog.login div.content form input[type=checkbox]:checked ~ span:after{
+	transform: scale(1);
+
+}
+
+div.dialog div.content form input:not([type=checkbox]) {
+	width: 350px;
+	text-align: left;
+	padding: 10px;
+
+	border: 1px solid @color_ac_blue;
+	background-color: @color_ac_text;
+
+	color: @color_text;
+	transition: all 0.3s;
+}
+
+div.dialog div.content form input:not([type=checkbox]):focus,
+div.dialog div.content form input:not([type=checkbox]):hover {
+	border: 1px solid @color_ac_green;
+}
+
+div.dialog div.content hr {
+	display: block;
+	height: 1px;
+
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	border: 0;
+	background-color: @color_text;
+}
+
+div.dialog div.content div.inner_content form a {
+	padding: 20px;
+	color: black;
+	transition: all 0.3s;
+}
+
+div.dialog div.content div.inner_content form a:hover {
+	color: @color_ac_blue;
+}
+
+div.dialog div.content div.inner_content div > label {
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+div.dialog div.content div.inner_content div > div.captcha label {
+	display: inline-block;
+	vertical-align: top;
+}
+
+div.dialog div.content div.inner_content div > div.captcha label input {
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(50% - 2px);
+}
+
+div.dialog div.content div.inner_content div div.captcha label img {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 2px;
+}
+
+div.dialog div.content div.inner_content div > label > input {
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	text-align: left;
+	padding: 10px;
+
+	border: 1px solid @color_ac_blue;
+	background-color: @color_ac_text;
+
+	color: @color_text;
+}
+
+div.dialog div.command_bar a {
+	background-color: @color_ac_text;
+	color: @color_ac_blue;
+	border: 1px solid @color_ac_blue;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+}
+
+div.dialog div.command_bar a:hover {
+	background-color: @color_ac_blue;
+	color: @color_ac_text;
+}
+
+div.dialog div.content div.inner_content div > div.captcha label input {
+	width: 41%;
+}
+
+div.dialog div.content div.inner_content div div.captcha label img {
+	padding-left: 25px;
+}
