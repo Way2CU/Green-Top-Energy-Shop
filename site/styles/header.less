@@ -43,10 +43,6 @@ nav#main > ul > li {
 	position: relative;
 }
 
-nav#main > ul > li:last-of-type {
-	margin-left: 2em;
-}
-
 nav#main > ul > li > a {
 	display: block;
 	padding-left: 15px;
@@ -66,25 +62,37 @@ nav#main > ul > li > a:hover {
 	color: @color_ac_text;
 }
 
+nav#main > ul > li > a.control_panel,
+nav#main > ul > li > a.logout,
+nav#main > ul > li > a.sign-up,
 nav#main > ul > li > a.login {
 	color: @color_special;
 }
 
+nav#main > ul > li > a.control_panel:hover,
+nav#main > ul > li > a.logout:hover,
+nav#main > ul > li > a.sign-up:hover,
 nav#main > ul > li > a.login:hover {
 	background-color: @color_special;
 	color: @color_ac_text;
 }
 
+nav#main > ul > li > a.control_panel svg,
+nav#main > ul > li > a.logout svg,
+nav#main > ul > li > a.sign-up svg,
 nav#main > ul > li > a.login svg {
 	display: inline-block;
 	width: 1.5em;
 	height: 1.5em;
 	vertical-align: middle;
-	margin-left: 10px;
+	margin-left: 5px;
 	fill: @color_special;
 	transition: all 0.3s;
 }
 
+nav#main > ul > li > a.control_panel:hover  svg,
+nav#main > ul > li > a.logout:hover svg,
+nav#main > ul > li > a.sign-up:hover svg,
 nav#main > ul > li > a.login:hover svg {
 	fill: white;
 }
@@ -161,4 +169,3 @@ header > a.phone > svg {
 	margin-right: 5px;
 	fill: @color_ac_green;
 }
-
