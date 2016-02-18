@@ -312,8 +312,15 @@ Site.CheckoutPages = function() {
 		// save selection if it's valid before switching to another page
 		if (result) {
 			var remark = '';
-			for (var index in self.currents)
-				remark += self.currents[index] + '\n';
+
+			self.inputs.each(function() {
+				var input = $(this);
+				var amount = parseInt(input.val());
+				var value = input.data('value');
+
+				if (amount > 0)
+					remark += value + ': ' + amount.toString() + '\n';
+			});
 
 			new Communicator('shop')
 				.set_asynchronous(false)
