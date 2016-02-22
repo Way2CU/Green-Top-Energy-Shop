@@ -44,7 +44,7 @@ section#about_egauge,
 section#package_details {
 	display: block;
 	position: relative;
-	padding-top: 15px;
+	padding-top: 1px;
 	padding-right: 0px;
 	padding-left: 50%;
 	background-position: calc(~'(50% - 510px)') top;
@@ -130,14 +130,27 @@ section#about_egauge h2 {
 	padding-left: 40px;
 }
 
+section#package_details div.price,
+section#packages div.package div.price, 
 section#package_details p,
 section#packages div.package p {
 	padding-left: 20px;
 }
 
-section#package_details p,
-section#packages div.package p.price {
+section#package_details div.price,
+section#packages div.package div.price {
 	font-weight: 700;
+	font-size: 1.3em;
+	position: relative;
+	width: 85px;
+}
+
+section#package_details div.price:before,
+section#packages div.package div.price:before {
+	content: attr(data-currency);
+	position: absolute;
+	top: 0px;
+	left: 100%;
 }
 
 section#package_features a.buy,
