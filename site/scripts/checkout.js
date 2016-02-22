@@ -90,9 +90,18 @@ Site.CheckoutPages = function() {
 	self.currents = new Array();
 	self.cart = null;
 	self.package_name = null;
+	self.limit = 1;
+	self.inputs = $();
+	self.totals = null;
 
 	self.validator = {};
 	self.handler = {};
+	self.current_limits = {
+			basic: 3,
+			renewable: 6,
+			business: 12,
+			industry: 12
+		};
 
 	/**
 	 * Complete object initialization.
@@ -115,6 +124,8 @@ Site.CheckoutPages = function() {
 
 		// get package name from location
 		self.package_name = window.location.pathname.split('/').pop();
+		if (self.package_name in self.current_limits)
+			self.limit = self.current_limits[self.package_name];
 
 		// load electrict current
 		self._load_current();
@@ -156,26 +167,93 @@ Site.CheckoutPages = function() {
 	 */
 	self._create_current_selection_ui = function() {
 		var values = self.property.value;
+		var container = self.current_selection_page.find('div.container');
 
+		// create range selection for each current
 		for (index in values) {
 			var value = values[index];
 			var label = $('<label>');
 			var input = $('<input>');
 			var span = $('<span>');
+			var span_counter = $('<span>');
 
 			// configure checkbox
 			input
-				.attr('type', 'checkbox')
+				.attr('type', 'range')
+				.attr('min', 0)
+				.attr('max', self.limit)
+				.attr('value', 0)
 				.data('value', value)
-				.on('click', self.handler.current_checkbox_click);
+				.on('change', self.handler.selection_change)
 
-			span.text(value);
+			span
+				.addClass('text')
+				.text(value);
+
+			span_counter
+				.addClass('counter')
+				.text(0);
 
 			label
-				.append(input)
 				.append(span)
-				.appendTo(self.current_selection_page.find('div.container'));
+				.append(input)
+				.appendTo(container);
+
+			// add input to the set we'll later use
+			self.inputs = self.inputs.add(input);
 		}
+
+		// create totals label
+		self.totals = self.current_selection_page.find('div.total span');
+		self.totals.text('0/' + self.limit.toString());
+	};
+
+	/**
+	 * Get number of currents selected. If specified parameter `input` will be
+	 * excluded from calculation.
+	 *
+	 * @param object input
+	 * @return integer
+	 */
+	self._get_total_currents_selected = function(input) {
+		var result = 0;
+		var elements = self.inputs;
+		if (input !== undefined)
+			elements = elements.not(input);
+
+		// get number of selected currents
+		elements.each(function() {
+			result += parseInt($(this).val());
+		});
+
+		return result;
+	};
+
+	/**
+	 * Handle changing number on input element for electric current selection.
+	 *
+	 * @param object event
+	 */
+	self.handler.selection_change = function(event) {
+		var input = $(this);
+		var current_value = parseInt(input.val());
+		var selected = 0;
+		var total = 0;
+
+		// get number of selected currents
+		selected = self._get_total_currents_selected(input);
+
+		// check if currents are out of limit
+		if (current_value > self.limit - selected) {
+			total = self.limit;
+			input.val(self.limit - selected);
+
+		} else {
+			total = current_value + selected;
+		}
+
+		// update total selection
+		self.totals.text(total.toString() + '/' + self.limit.toString());
 	};
 
 	/**
@@ -223,46 +301,26 @@ Site.CheckoutPages = function() {
 	};
 
 	/**
-	 * Handle clicking electric current selection.
-	 *
-	 * @param object event
-	 */
-	self.handler.current_checkbox_click = function(event) {
-		var input = $(this);
-
-		// prevent selecting more than three
-		if (self.currents.length == 3 && input.is(':checked')) {
-			event.preventDefault();
-			event.stopPropagation();
-			return;
-		}
-
-		// update current selection array
-		var value = input.data('value');
-		var index = self.currents.indexOf(value);
-
-		if (input.is(':checked') && index == -1) {
-			self.currents.push(value);
-
-		} else if (!input.is(':checked') && index > -1) {
-			self.currents.splice(index, 1);
-		}
-	};
-
-	/**
 	 * Validate proper current selection on checkout page.
 	 *
 	 * @return boolean
 	 */
 	self.validator.current_selection_page = function() {
 		// we require at least one current to be selected
-		var result = self.currents.length > 0;
+		var result = self._get_total_currents_selected() == self.limit;
 
 		// save selection if it's valid before switching to another page
 		if (result) {
 			var remark = '';
-			for (var index in self.currents)
-				remark += self.currents[index] + '\n';
+
+			self.inputs.each(function() {
+				var input = $(this);
+				var amount = parseInt(input.val());
+				var value = input.data('value');
+
+				if (amount > 0)
+					remark += value + ': ' + amount.toString() + '\n';
+			});
 
 			new Communicator('shop')
 				.set_asynchronous(false)
