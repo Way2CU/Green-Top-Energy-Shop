@@ -4,10 +4,9 @@
 	<div class="'package '. $params['uid']" cms:eval="class">
 		<cms:markdown param="description" multilanguage="yes"/>
 
-		<p class="price">
+		<div class="price" data-currency="shop::getDefaultCurrency()" cms:eval="data-currency">
 			<cms:var param="price" />
-			<cms:text constant="currency_symbol"/>
-		</p>
+		</div>
 		
 		<a
 			href="url_Make('checkout', 'shop', array('package', $params['uid']))"
