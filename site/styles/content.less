@@ -364,7 +364,6 @@ section#package_features article {
 	background-image: none;
 }
 
-section#blog-content article,
 section#return article,
 section#shipping article,
 section#warranty article,
@@ -374,10 +373,6 @@ section#package_features article {
 	margin-right: auto;
 	width: 960px;
 	padding-right: 0%;
-}
-
-section#blog-content article img {
-	display: block;
 }
 
 section#return article a,
@@ -732,6 +727,7 @@ div#input_details div.checkout_controls button:hover {
 /**
  * Contact form
  */
+
 section#contact {
 	display: block;
 	padding: @vertical_spacing calc(~'(100% - 1200px) / 2');
@@ -1145,4 +1141,70 @@ section#contact-form div.controls button {
 
 section#contact-form div.controls button:hover {
 	color: @color_ac_green;
+}
+
+// Blog page
+
+section#unique-post,
+section#blog-content {
+	display: block;
+	padding: @vertical_spacing calc(~'(100% - 960px) / 2');
+	position: relative;
+}
+
+nav#article {
+	position: absolute;
+	padding: 10px;
+	top: 100px;
+	right: calc(~'(50% - 480px)');
+	border: 1px solid lighten(@color_text,30%);
+	text-align: center;
+}
+
+nav#article ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+nav#article ul li {
+	display: block;
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+nav#article ul li a {
+	display: block;
+	color: @color_text;
+	transition: all 0.3s;
+}
+
+nav#article ul li a:hover {
+	color: @color_ac_green;
+}
+
+section#unique-post article,
+section#blog-content article {
+	display: inline-block;
+	vertical-align: top;
+	padding-bottom: 10px;
+	border-bottom: 1px solid lighten(@color_text,30%);
+	width: 650px;
+}
+
+section#unique-post article h2,
+section#blog-content article h2 {
+	margin-bottom: 5px;
+}
+
+section#unique-post article span.author,
+section#unique-post article span.date,
+section#blog-content article span.date,
+section#blog-content article span.author {
+	color: @color_ac_green;
+}
+
+section#unique-post article img,
+section#blog-content article img {
+	display: block;
 }
