@@ -15,12 +15,27 @@ header {
 
 header a.logo {
 	vertical-align: middle;
+
+	text-align: left;
+	text-decoration: none;
+
+	color: @color_text;
+	line-height: 85% !important;
 }
 
+body.rtl header a.logo {
+	text-align: right;
+}
 
 header a.logo img {
-	width: 208px;
-	height: 60px;
+	@height: 40;
+	width: unit(4.70614035087719298245 * @height, px);
+	height: unit(@height, px);
+}
+
+header a.logo span {
+	display: block;
+	font-size: 0.8rem;
 }
 
 nav#main {
