@@ -8,7 +8,5 @@
 		<param name="logo" value="logo.svg"/>
 		<param name="slogan" value="site_slogan"/>
 		<param name="menu" value="parts/main_menu.xml"/>
-		<param name="phone" value="phone_number"/>
-		<param name="phone_sprite_icon" value="site/images/site-sprite.svg#icon-phone"/>
 	</cms:template>
 </document>
