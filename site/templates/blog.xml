@@ -27,9 +27,25 @@
 					name="articles"
 					action="show_list"
 					group="blog"
-					template="parts/basic_article.xml"
+					order_by="timestamp"
+					order_asc="0"
+					limit="2"
+					template="parts/blog_article.xml"
 					cms:eval="group"
 					/>
+
+				<nav id="article">
+					<h4><cms:text constant="title_articles_menu"/></h4>
+					<ul>
+						<cms:module
+							name="articles"
+							action="show_list"
+							group="blog"
+							template="parts/archive_article.xml"
+							cms:eval="group"
+							/>
+					</ul>	
+				</nav>	
 			</section>
 
 			<!-- Footer -->
