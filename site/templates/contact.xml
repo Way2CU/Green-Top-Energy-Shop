@@ -18,7 +18,7 @@
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
 
-			<section id="about">
+			<section id="contact-header">
 				<h2><cms:text constant="title_contact"/></h2>
 			</section>
 
