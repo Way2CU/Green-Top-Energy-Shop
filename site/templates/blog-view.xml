@@ -18,34 +18,14 @@
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
 
-			<section id="blog-header">
-				<h2><cms:text constant="title_blog"/></h2>
-			</section>
-
-			<section id="blog-content">
+			<section id="unique-post">
 				<cms:module
 					name="articles"
-					action="show_list"
-					group="blog"
-					order_by="timestamp"
-					order_asc="0"
-					limit="2"
+					action="show"
+					id="fix_id($_REQUEST['id'])"
 					template="parts/blog_article.xml"
-					cms:eval="group"
+					cms:eval="id"
 					/>
-
-				<nav id="article">
-					<h4><cms:text constant="title_articles_menu"/></h4>
-					<ul>
-						<cms:module
-							name="articles"
-							action="show_list"
-							group="blog"
-							template="parts/archive_article.xml"
-							cms:eval="group"
-							/>
-					</ul>	
-				</nav>	
 			</section>
 
 			<!-- Footer -->

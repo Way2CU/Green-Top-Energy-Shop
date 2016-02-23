@@ -30,7 +30,7 @@
 	<section name="blog">
 		<language name="all">
 			<action name="_default" file="blog.xml"/>
-			<action name="view" file="blog_view.xml"/>
+			<action name="view" file="blog-view.xml"/>
 		</language>
 	</section>
 	<section name="help">

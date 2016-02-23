@@ -1,0 +1,10 @@
+<document>
+	<li>
+		<a
+			href="url_Make('view', 'blog', array('id', $params['id']))"
+			cms:eval="href"
+			>
+			<cms:var param="title" multilanguage="yes"/>
+		</a>
+	</li>
+</document>

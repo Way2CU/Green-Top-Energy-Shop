@@ -967,3 +967,65 @@ section#contact-form div.controls button {
 section#contact-form div.controls button:hover {
 	color: @color_ac_green;
 }
+
+
+// Blog page
+
+section#unique-post,
+section#blog-content {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	position: relative;
+}
+
+nav#article {
+	display: block;
+}
+
+nav#article ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+nav#article ul li {
+	display: block;
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+nav#article ul li a {
+	display: block;
+	color: @color_text;
+	transition: all 0.3s;
+}
+
+nav#article ul li a:hover {
+	color: @color_ac_green;
+}
+
+section#unique-post article,
+section#blog-content article {
+	display: block;
+	padding-bottom: 10px;
+	border-bottom: 1px solid lighten(@color_text,30%);
+}
+
+section#unique-post article h2,
+section#blog-content article h2 {
+	margin-bottom: 5px;
+}
+
+section#unique-post article span.author,
+section#unique-post article span.date,
+section#blog-content article span.date,
+section#blog-content article span.author {
+	color: @color_ac_green;
+}
+
+section#unique-post article img,
+section#blog-content article img {
+	display: block;
+}
