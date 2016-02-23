@@ -36,7 +36,7 @@ section#packages div.package {
 	transition: 0.5s opacity, 0s visibility;
 	transition-delay: 0s, 0.5s;
 }
-
+section#blog-header,
 section#about,
 section#title_documentation,
 section#title_video,
@@ -55,6 +55,7 @@ section#package_details {
 	min-height: 500px;
 }
 
+section#blog-header,
 section#about,
 section#title_documentation,
 section#title_video,
@@ -108,11 +109,13 @@ section#title_documentation {
 	background-color: @color_ac_blue;
 }
 
+section#blog-header,
 section#about {
 	background-image: url(../images/blog-background.jpg);
 	background-color: @color_ac_blue;
 }
 
+section#blog-header h2,
 section#about h2,
 section#title_documentation h2,
 section#title_video h2,
@@ -123,6 +126,7 @@ section#packages div.package h2 {
 	padding-left: 20px;
 }
 
+section#blog-header h2,
 section#about h2,
 section#title_documentation h2,
 section#title_video h2,
@@ -346,7 +350,7 @@ section#package_features article {
 	background-image: none;
 }
 
-
+section#blog-content article,
 section#return article,
 section#shipping article,
 section#warranty article,
@@ -356,6 +360,10 @@ section#package_features article {
 	margin-right: auto;
 	width: 960px;
 	padding-right: 0%;
+}
+
+section#blog-content article img {
+	display: block;
 }
 
 section#return article a,

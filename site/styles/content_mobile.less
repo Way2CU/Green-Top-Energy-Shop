@@ -38,6 +38,7 @@ section#packages div.package {
 	transition-delay: 0s, 0.5s;
 }
 
+section#blog-header,
 section#about,
 section#title_documentation,
 section#title_video,
@@ -57,6 +58,7 @@ section#package_details {
 	min-height: 500px;
 }
 
+section#blog-header,
 section#about,
 section#title_documentation,
 section#title_video,
@@ -112,11 +114,13 @@ section#title_documentation {
 	background-color: @color_ac_blue;
 }
 
+section#blog-header,
 section#about {
 	background-image: url(../images/blog-background.jpg);
 	background-color: @color_ac_blue;
 }
 
+section#blog-header h2,
 section#about h2,
 section#title_documentation h2,
 section#title_video h2,
@@ -140,7 +144,6 @@ section#packages div.package p {
 
 section#package_details div.price,
 section#packages div.package div.price {
-
 	font-weight: 700;
 	font-size: 1.3em;
 	position: relative;
@@ -303,6 +306,7 @@ section#package_details.industry article {
 /**
  * Egauge article
  */
+
 section#return, 
 section#shipping,
 section#warranty, 
@@ -343,6 +347,7 @@ section#package_features article {
 	min-height: 0px;
 }
 
+section#blog-content article,
 section#return article,
 section#shipping article, 
 section#warranty article, 
@@ -352,6 +357,10 @@ section#package_features article {
 	margin-right: auto;
 	width: 95%;
 	padding-right: 0%;
+}
+
+section#blog-content article img {
+	display: block;
 }
 
 section#return article a,
