@@ -13,8 +13,12 @@
 				cms:eval="src,alt"
 				/>
 		</figure>
-		<span class="title"><cms:var param="name" multilanguage="yes"/></span>
-		<span class="price"><cms:var param="price"/></span>
+		<span class="title" >
+			<cms:var param="name" multilanguage="yes"/>
+		</span>
+		<span class="price" data-currency="shop::getDefaultCurrency()" cms:eval="data-currency">
+			<cms:var param="price"/>
+		</span>
 		<span class="count"/>
 		<div class="item_controls">
 			<a data-amount="1"><cms:raw text="+"/></a>
