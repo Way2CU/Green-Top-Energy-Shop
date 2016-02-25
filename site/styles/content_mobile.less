@@ -968,6 +968,105 @@ section#contact-form div.controls button:hover {
 	color: @color_ac_green;
 }
 
+/**
+ * Extra checkout styles
+ */
+div#current_selection label {
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+div#current_selection label span.text {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+div#current_selection label input {
+	vertical-align: middle;
+}
+
+div#current_selection div.total {
+	padding-bottom: 10px;
+}
+
+div#current_selection div.total span {
+	display: inline-block;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+div#related_products {
+	padding: 0px;
+}
+
+div#related_products div.container {
+	min-height: 300px;
+	overflow-y: auto;
+}
+
+div#related_products div.related_item {
+	display: block;
+	border-bottom: 1px solid #f0f0f0;
+	white-space: nowrap;
+}
+
+div#related_products div.related_item figure {
+	display: block;
+	width: 100px;
+
+	margin: 0px;
+}
+
+div#related_products div.related_item span {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	white-space: normal;
+	width: 25%;
+	position: relative;
+}
+
+div#related_products div.related_item span.price,
+div#related_products div.related_item span.title {
+	text-align: left;
+	padding-left: 5px;
+}
+
+body.rtl div#related_products div.related_item span.price,
+body.rtl div#related_products div.related_item span.title {
+	text-align: right;
+	padding-left: 0px;
+	padding-right: 5px;
+}
+
+div#related_products div.related_item span.price:before {
+	content: attr(data-currency);
+	position: absolute;
+	top: 0px;
+	left: 65px
+}
+
+div#related_products div.related_item div.item_controls {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20%
+}
+
+div#related_products div.related_item div.item_controls a {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 2em;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+div#related_products div.related_item div.item_controls a:hover {
+	color: @color_ac_green;
+}
+
 
 // Blog page
 

@@ -820,7 +820,6 @@ div#related_products div.container {
 
 div#related_products div.related_item {
 	display: block;
-	border-top: 1px solid #f0f0f0;
 	border-bottom: 1px solid #f0f0f0;
 	white-space: nowrap;
 }
@@ -839,6 +838,27 @@ div#related_products div.related_item span {
 	text-align: center;
 	white-space: normal;
 	width: 20%;
+	position: relative;
+}
+
+div#related_products div.related_item span.price,
+div#related_products div.related_item span.title {
+	text-align: left;
+	padding-left: 5px;
+}
+
+body.rtl div#related_products div.related_item span.price,
+body.rtl div#related_products div.related_item span.title {
+	text-align: right;
+	padding-left: 0px;
+	padding-right: 5px;
+}
+
+div#related_products div.related_item span.price:before {
+	content: attr(data-currency);
+	position: absolute;
+	top: 0px;
+	left: 65px
 }
 
 div#related_products div.related_item div.item_controls {
@@ -852,7 +872,13 @@ div#related_products div.related_item div.item_controls a {
 	vertical-align: middle;
 	padding-left: 5px;
 	padding-right: 5px;
-	font-size: 1.5em;
+	font-size: 2em;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+div#related_products div.related_item div.item_controls a:hover {
+	color: @color_ac_green;
 }
 
 /**
