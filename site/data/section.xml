@@ -38,8 +38,7 @@
 			<action name="about-us" file="about_us.xml"/>
 			<action name="warranty-agreement" file="warranty.xml"/>
 			<action name="shipping-policy" file="shipping.xml"/>
-			<action name="return-policy" file="return.xml"/>
-			<action name="terms-of-use" file="terms.xml"/>
+			<action name="privacy-policy" file="privacy.xml"/>
 		</language>
 	</section>
 	<section name="contact-us">
