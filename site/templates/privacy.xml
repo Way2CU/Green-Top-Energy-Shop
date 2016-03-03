@@ -14,11 +14,11 @@
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
 			
-			<section id="return">
+			<section id="privacy">
 				<cms:module
 					name="articles"
 					action="show"
-					text_id="return"
+					text_id="privacy_policy"
 					template="parts/basic_article.xml"
 					/>
 			</section>
