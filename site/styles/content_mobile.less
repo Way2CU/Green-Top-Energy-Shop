@@ -934,6 +934,7 @@ section#contact-form  form label {
 	transition: all 0.3s;
 }
 
+section#contact-form  form label  textarea,
 section#contact-form  form label input {
 	border: none;
 	border-bottom: 1px solid @color_ac_blue;
@@ -943,6 +944,11 @@ section#contact-form  form label input {
 	transition: all 0.3s;
 }
 
+section#contact-form  form label  textarea {
+	height: 50px;
+}
+
+section#contact-form  form label  textarea:focus,
 section#contact-form  form label input:focus {
 	border-bottom: 1px solid @color_ac_green;
 }
