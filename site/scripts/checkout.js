@@ -191,8 +191,7 @@ Site.CheckoutPages = function() {
 				.text(value);
 
 			span_counter
-				.addClass('count')
-				.text(0);
+				.addClass('count');
 
 			label
 				.append(span)
