@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
 <document>
+	<cms:module
+		name="backend"
+		action="save_unpriviledged_user_timer"
+		/>
 	<cms:svg file="site-sprite.svg"/>
 
 	<cms:template file="stock/header_generic.xml">
