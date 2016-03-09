@@ -252,6 +252,11 @@ Site.CheckoutPages = function() {
 			total = current_value + selected;
 		}
 
+		// update number displayed on label
+		if (total > 0)
+			input.closest('label').data('count', total); else
+			input.closest('label').data('count', '');
+
 		// update total selection
 		self.totals.text(total.toString() + '/' + self.limit.toString());
 	};
