@@ -5,6 +5,7 @@
 	<html lang="$language" cms:eval="lang">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+
 			<link href='//fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
 			<cms:collection include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
@@ -75,7 +76,6 @@
 						template="parts/video_mobile.xml"
 						/>
 				</cms:mobile>
-
 			</section>
 
 			<!-- Features -->

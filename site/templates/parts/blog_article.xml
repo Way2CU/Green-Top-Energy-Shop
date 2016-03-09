@@ -1,7 +1,8 @@
 <document>
 	<article>
 		<h2><cms:var param="title" multilanguage="yes"/></h2>
-		<span class="date"><cms:var param="date" /></span>
+		<span class="date"><cms:var param="date"/></span>
+
 		<cms:markdown param="content" multilanguage="yes"/>
 		<span class="author"><cms:text constant="title_author"/><cms:var param="author" /></span>
 	</article>	

@@ -1,6 +1,6 @@
 <document>
 	<li>
-		<a href="url_Make($params['uid'],packages)" cms:eval="href">
+		<a href="url_Make($params['uid'], 'packages')" cms:eval="href">
 			<cms:var param="name" multilanguage="yes"/>
 		</a>
 	</li>

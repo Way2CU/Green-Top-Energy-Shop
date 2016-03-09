@@ -4,7 +4,12 @@
 	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" cms:eval="lang">
 		<head>
-			<title><cms:text constant="site_title"/><cms:raw text=" - "/><cms:text constant="video_page_label"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="menu_videos"/>
+			</title>
+
 			<link href='//fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
 			<cms:collection include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
@@ -23,7 +28,7 @@
 					name="youtube"
 					action="show_list"
 					group_text_id="videos"
-					template="parts/video_list.xml"	
+					template="parts/video_list.xml"
 					/>
 			</section>
 

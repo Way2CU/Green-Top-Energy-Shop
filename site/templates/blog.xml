@@ -7,7 +7,7 @@
 			<title>
 				<cms:text constant="site_title"/>
 				<cms:raw text=" - "/>
-				<cms:text constant="menu_contact_us"/>
+				<cms:text constant="menu_blog"/>
 			</title>
 
 			<link href='//fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>

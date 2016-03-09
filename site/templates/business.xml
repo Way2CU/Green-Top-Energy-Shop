@@ -4,7 +4,12 @@
 	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" cms:eval="lang">
 		<head>
-			<title><cms:text constant="site_title"/><cms:raw text=" - "/><cms:text constant="business_page_label"/></title>
+			<title>
+				<cms:text constant="site_title"/>
+				<cms:raw text=" - "/>
+				<cms:text constant="business_page_label"/>
+			</title>
+
 			<link href='//fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
 			<cms:collection include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
@@ -21,7 +26,7 @@
 				template="parts/package.xml"
 				cms:eval="uid"
 				/>
-			
+
 			<section id="package_features" class="$action" cms:eval="class">
 				<h2><cms:text constant="title_package_system"/></h2>
 
@@ -45,7 +50,7 @@
 						>
 						<param name="title" value=""/>
 						<param name="sprite" value="site/images/site-sprite.svg"/>
-					</cms:module>	
+					</cms:module>
 				</ul>
 
 				<a
@@ -73,7 +78,7 @@
 			</section>
 			<!-- Features -->
 			<cms:template file="parts/features.xml"/>
-	
+
 
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
