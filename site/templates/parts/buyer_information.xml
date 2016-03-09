@@ -557,6 +557,7 @@
 							name="articles"
 							action="show"
 							text_id="current_selection"
+							template="parts/article_no_title.xml"
 							/>
 						<div class="container"/>
 						<div class="total">
