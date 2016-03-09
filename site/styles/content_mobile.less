@@ -11,7 +11,7 @@
  */
 section#packages {
 	position: relative;
-	margin-top: -17px;
+	margin-top: -5px;
 	min-height: 650px;
 	text-align: center;	
 }
@@ -75,6 +75,19 @@ section#packages div.package.visible {
 	opacity: 1;
 	visibility: visible;
 	transition-delay: 0s, 0s;
+}
+
+section#packages div.package.manual_slider {
+	background-color: @color_ac_blue;
+	background-image: url(../images/slides/manual-slider.jpg);
+}
+
+section#packages div.package.manual_slider ul {
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 58%;
 }
 
 section#package_details.basic,
@@ -263,7 +276,7 @@ section#packages div.controls {
 	position: absolute;
 	top: 20px;
 	left: 50%;
-	margin-left: -78px;
+	margin-left: -97.5px;
 }
 
 section#packages div.controls a {
