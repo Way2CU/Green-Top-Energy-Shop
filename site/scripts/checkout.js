@@ -191,12 +191,13 @@ Site.CheckoutPages = function() {
 				.text(value);
 
 			span_counter
-				.addClass('counter')
+				.addClass('count')
 				.text(0);
 
 			label
 				.append(span)
 				.append(input)
+				.append(span_counter)
 				.appendTo(container);
 
 			// add input to the set we'll later use
@@ -253,9 +254,9 @@ Site.CheckoutPages = function() {
 		}
 
 		// update number displayed on label
-		if (total > 0)
-			input.closest('label').data('count', total); else
-			input.closest('label').data('count', '');
+		if (current_value > 0)
+			input.next().html(current_value); else
+			input.next().html('');
 
 		// update total selection
 		self.totals.text(total.toString() + '/' + self.limit.toString());
