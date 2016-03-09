@@ -16,6 +16,14 @@
 
 			<!-- Packages slider -->
 			<section id="packages">
+				<!-- Additional manual slider -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="manual_slider"
+					template="parts/slider_article.xml"
+					/>
+			
 				<cms:module
 					name="shop"
 					action="show_item_list"
