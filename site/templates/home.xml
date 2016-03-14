@@ -12,6 +12,14 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<!-- Verify user account -->
+			<cms:if section="user" action="verify">
+				<cms:module
+					name="backend"
+					action="verify_account"
+					/>
+			</cms:if>
+
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
 
@@ -24,7 +32,7 @@
 					text_id="manual_slider"
 					template="parts/slider_article.xml"
 					/>
-			
+
 				<cms:module
 					name="shop"
 					action="show_item_list"
