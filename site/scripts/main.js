@@ -885,6 +885,8 @@ Site.on_load = function() {
 	// create package slider
 	Site.package_slider = new PageControl('section#packages', 'div.package');
 	Site.package_slider
+		.setInterval(5000)
+		.setWrapAround(true)
 		.attachControls('section#packages div.controls a');
 
 	// connect checkout buttons
