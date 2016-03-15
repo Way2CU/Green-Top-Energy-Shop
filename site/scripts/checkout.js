@@ -246,7 +246,8 @@ Site.CheckoutPages = function() {
 		// check if currents are out of limit
 		if (current_value > self.limit - selected) {
 			total = self.limit;
-			input.val(self.limit - selected);
+			current_value = self.limit - selected);
+			input.val(current_value);
 
 		} else {
 			total = current_value + selected;
