@@ -7,7 +7,7 @@
 	<section name="user">
 		<language name="all">
 			<action name="verify" file="home.xml"/>
-			<action name="password-recovery" file="home.xml"/>
+			<action name="password-recovery" file="password-recovery.xml"/>
 			<action name="control-panel" file="home.xml"/>
 			<action name="contact" file="home.xml"/>
 		</language>
