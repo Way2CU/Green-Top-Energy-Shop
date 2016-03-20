@@ -7,9 +7,6 @@
  */
 use Core\Module;
 
-require_once('units/interval_manager.php');
-require_once('units/time_manager.php');
-
 
 class delivery extends Module {
 	private static $_instance;
