@@ -144,6 +144,10 @@ section#packages div.package h2 {
 	padding-left: 20px;
 }
 
+section#contact-header p,
+section#blog-header p,
+section#title_video p,
+section#title_documentation p,
 section#contact-header h2,
 section#blog-header h2,
 section#about h2,
@@ -151,6 +155,15 @@ section#title_documentation h2,
 section#title_video h2,
 section#about_egauge h2 {
 	padding-left: 40px;
+}
+
+section#contact-header p,
+section#blog-header p,
+section#title_video p,
+section#title_documentation p {
+	width: 50%;
+	font-size: 1.5em;
+	color: @color_ac_text;
 }
 
 section#package_details div.price,
@@ -332,6 +345,7 @@ section#package_details.industry article {
 /**
  * Egauge article
  */
+section#terms,
 section#contact-form, 
 section#privacy,
 section#shipping,
@@ -368,6 +382,7 @@ section#package_features article {
 	background-image: none;
 }
 
+section#terms article,
 section#privacy article,
 section#shipping article,
 section#warranty article,
@@ -379,6 +394,7 @@ section#package_features article {
 	padding-right: 0%;
 }
 
+section#terms article a,
 section#privacy article a,
 section#shipping article a,
 section#warranty article a {
@@ -386,10 +402,18 @@ section#warranty article a {
 	transition: all 0.3s;
 }
 
+section#terms article a:hover,
 section#privacy article a:hover,
 section#shipping article a:hover,
 section#warranty article a:hover {
 	color: darken(@color_header,10%);
+}
+
+section#terms article ul,
+section#terms article ol {
+	margin: 0px;
+	padding: 0px;
+	padding-left: 20px;
 }
 
 section#eguage_details article.ethernet {
