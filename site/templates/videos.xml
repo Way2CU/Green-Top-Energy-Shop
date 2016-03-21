@@ -20,7 +20,12 @@
 			<cms:template file="parts/header.xml"/>
 
 			<section id="title_video">
-				<h2><cms:text constant="title_videos_page"/></h2>
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="video"
+					template="parts/header_article.xml"
+					/>
 			</section>
 
 			<section id="videos">
