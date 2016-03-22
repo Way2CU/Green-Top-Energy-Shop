@@ -34,6 +34,18 @@
 					template="parts/blog_article.xml"
 					cms:eval="id"
 					/>
+				<nav id="article">
+					<h4><cms:text constant="title_articles_menu"/></h4>
+					<ul>
+						<cms:module
+							name="articles"
+							action="show_list"
+							group="blog"
+							template="parts/archive_article.xml"
+							cms:eval="group"
+							/>
+					</ul>	
+				</nav>	
 			</section>
 
 			<!-- Footer -->
