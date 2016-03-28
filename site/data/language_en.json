@@ -39,6 +39,8 @@
 	"title_author": "Posted by ",
 	"title_articles_menu": "Previous posts",
 	"title_password_recovery": "Password recovery",
+	"title_user_service": "Service contact:",
+	"title_user_installation": "Installation contact",
 	"label_total": "Selected options:",
 	"label_agree_to_terms": "I agree to the terms and conditions.",
 	"label_captcha": "Visual verification:",
