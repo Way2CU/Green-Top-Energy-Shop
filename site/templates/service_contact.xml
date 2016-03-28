@@ -18,13 +18,14 @@
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
 
-			<section id="contact">
+			<div id="user-service">
+				<h2><cms:text constant="title_user_service"/></h2>
 				<cms:module
 					name="contact_form"
 					action="show"
-					text_id="service"
-				/>
-			</section>
+					text_id="service_contact"
+					/>
+			</div>
 
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
