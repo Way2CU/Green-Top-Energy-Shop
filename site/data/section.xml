@@ -6,6 +6,7 @@
 	</section>
 	<section name="user">
 		<language name="all">
+			<action name="_default" file="user.xml"></action>
 			<action name="verify" file="home.xml"/>
 			<action name="password-recovery" file="password-recovery.xml"/>
 			<action name="control-panel" file="home.xml"/>
