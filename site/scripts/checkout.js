@@ -328,10 +328,7 @@ Site.CheckoutPages = function() {
 					remark += value + ': ' + amount.toString() + '\n';
 			});
 
-			new Communicator('shop')
-				.set_asynchronous(false)
-				.use_cache(false)
-				.send('json_save_remark', {remark: remark});
+			localStorage.setItem('remark', remark);
 		}
 
 		return result;
@@ -350,8 +347,29 @@ Site.CheckoutPages = function() {
 	self._init();
 }
 
+/**
+ * Save previously generated current selection remark.
+ */
+function save_remark() {
+	var remark = localStorage.getItem('remark');
+
+	if (remark !== null) {
+		// send remark to server
+		new Communicator('shop')
+			.use_cache(false)
+			.send('json_save_remark', {remark: remark});
+
+		// update field on checkout form
+		$('div#checkout textarea[name=remarks]').val(remark);
+	}
+}
+
 $(function() {
 	// create checkout pages only if form is present
 	if ($('div#input_details form').length > 0)
 		Site.checkout_pages = new Site.CheckoutPages();
+
+	// save transaction remark
+	if ($('div#checkout').length > 0)
+		save_remark();
 });
