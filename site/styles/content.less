@@ -348,6 +348,7 @@ section#package_details.industry article {
 /**
  * Egauge article
  */
+section#user,
 section#terms,
 section#contact-form, 
 section#privacy,
@@ -700,26 +701,149 @@ div#checkout_steps a.active:before {
 	background-color: @color_header;
 }
 
+div#user-installation,
+div#user-service,
 div#input_details {
 	border-radius: 0px 0px 0px 0px;
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
+div#user-installation,
+div#user-service {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 1000px;
+}
+
+div#user-installation form,
+div#user-service form {
+	padding: 10px;
+}
+
+div#user-installation form fieldset {
+	margin: 0px;
+	padding: 2px;
+	border: none;
+	display: inline-block;
+	vertical-align: top;
+	width: 19%;
+}
+
+div#user-installation form fieldset[name="solar"],
+div#user-installation form fieldset[name="user_information"] {
+	display: block;
+	margin-bottom: 20px;
+	text-align: left;
+	width: 100%;
+}
+
+div#user-installation form fieldset[name="solar"] {
+	margin-top: 20px;
+}
+
+div#user-installation form fieldset[name="user_information"] label {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+}
+
+div#user-installation form fieldset[name="user_information"] label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 185px;
+}
+
+div#user-installation form fieldset[name="user_information"] label input {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+div#user-installation form fieldset[name="ct_number"] label,
+div#user-installation form fieldset[name="ct_ratio"] label,
+div#user-installation form fieldset[name="voltage_phase"] label,
+div#user-installation form fieldset[name="load_name"] label,
+div#user-installation form fieldset[name="remarks"] label {
+	margin-bottom: 0px;
+}
+
+div#user-installation form fieldset[name="ct_number"] input,
+div#user-installation form fieldset[name="ct_ratio"] input,
+div#user-installation form fieldset[name="voltage_phase"] input,
+div#user-installation form fieldset[name="load_name"] input,
+div#user-installation form fieldset[name="remarks"] input {
+	width: 100%;
+}
+
+div#user-installation form fieldset[name="ct_number"] {
+	width: 100px;
+}
+
+div#user-installation form fieldset[name="ct_number"] input {
+	text-align: center;
+}
+
+div#user-installation form label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+div#user-service form label,
+div#user-installation form > label {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+}
+
+div#user-installation form fieldset[name="user_information"] label.radio {
+	display: block;
+	text-align: left;
+}
+
+div#user-installation form label.radio input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50px;
+}
+
+div#user-service form label {
+	margin-bottom: 10px;
+}
+
+div#user-installation h2,
+div#user-service h2,
 div#input_details h1 {
 	padding: 14px;
 	border-radius: 0px 0px 0px 0px;
 	background-color: @color_header;
+	color: @color_ac_text;
+	text-align: center;
 }
 
+div#user-installation form label span,
+div#user-service form label span,
 div#input_details label span {
 	text-align: left;
 	color: @color_text;
+}
+
+div#user-installation form label span,
+div#user-service form label span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 185px;
 }
 
 div#input_details label small {
 	color: @color_text;
 }
 
+div#user-installation form textarea,
+div#user-installation form select,
+div#user-installation form input,
+div#user-service form textarea,
+div#user-service form select,
+div#user-service form input,
 div#input_details label input[type=email],
 div#input_details label input[name=phone],
 div#input_details label input[name=street],
@@ -727,6 +851,50 @@ div#input_details label input[name=street2],
 div#input_details label input[name=zip],
 div#input_details label input {
 	width: 280px;
+}
+
+div#user-installation form select,
+div#user-service form select {
+	padding: 5px;
+	width: 292px;
+}
+
+div#user-installation form textarea,
+div#user-installation form select,
+div#user-installation form input,
+div#user-service form textarea,
+div#user-service form select,
+div#user-service form input {
+	border: 1px solid @color_ac_blue;
+	transition: all 0.3s;
+}
+
+div#user-installation form textarea:hover,
+div#user-installation form select:hover,
+div#user-installation form input:hover,
+div#user-installation form textarea:focus,
+div#user-installation form select:focus,
+div#user-installation form input:focus
+div#user-service form textarea:hover,
+div#user-service form select:hover,
+div#user-service form input:hover,
+div#user-service form textarea:focus,
+div#user-service form select:focus,
+div#user-service form input:focus {
+	border: 1px solid @color_ac_green;
+}
+
+div#user-installation form textarea,
+div#user-service form textarea {
+	display: inline-block;
+	vertical-align: middle;
+	width: 285px;
+	height: 30px;
+}
+
+div#user-installation form input,
+div#user-service form input {
+	padding: 5px;
 }
 
 div#input_details label select {
@@ -738,6 +906,19 @@ div#input_details label input:focus {
 	border: 1px solid @color_features;
 }
 
+div#user-installation form div.controls,
+div#user-service form div.controls {
+	display: block;
+	text-align: center;
+}
+
+div#user-installation form div.controls button,
+div#user-service form div.controls button {
+	display: inline-block;
+}
+
+div#user-installation form div.controls button,
+div#user-service form div.controls button,
 div#input_details div.checkout_controls button {
 	border-radius: 0px;
 	border: none;
@@ -750,6 +931,17 @@ div#input_details div.checkout_controls button {
 	transition: all 0.3s;
 }
 
+div#user-installation form div.controls button,
+div#user-service form div.controls button {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	color: @color_ac_text;
+}
+
+div#user-installation form div.controls button:hover,
+div#user-service form div.controls button:hover,
 div#input_details div.checkout_controls button:hover {
 	background-color: lighten(@color_ac_blue, 10%);
 }
@@ -1111,7 +1303,8 @@ div.dialog div.content div.inner_content div div.captcha label img {
 /**
  * contact page
  */
-section#contact-form  form {
+
+section#contact-form form {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -1277,3 +1470,12 @@ section#unique-post article img,
 section#blog-content article img {
 	display: block;
 }
+
+// user forms
+
+// section#user form {
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	width: 600px;
+// }
+
