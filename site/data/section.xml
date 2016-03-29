@@ -6,6 +6,7 @@
 	</section>
 	<section name="user">
 		<language name="all">
+			<action name="_default" file="user.xml"/>
 			<action name="verify" file="home.xml"/>
 			<action name="password-recovery" file="password-recovery.xml"/>
 			<action name="control-panel" file="home.xml"/>
@@ -53,8 +54,6 @@
 	<section name="contact-us">
 		<language name="all">
 			<action name="_default" file="contact.xml"/>
-			<action name="service" file="service_contact.xml"/>
-			<action name="installation" file="installation_contact.xml"/>
 		</language>
 	</section>
 </document>
