@@ -1,0 +1,12 @@
+[main]
+host = https://www.transifex.com
+
+[greentops.web-site]
+file_filter = site/data/language_<lang>.json
+source_lang = en
+type = KEYVALUEJSON
+
+[greentops.delivery-module]
+file_filter = site/modules/delivery/data/language_<lang>.json
+source_lang = en
+type = KEYVALUEJSON
