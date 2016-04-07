@@ -74,31 +74,6 @@
 				>
 				<cms:text constant="menu_contact_us"/>
 			</a>
-
-			<cms:user>
-				<ul>
-					<li>
-						<a
-							class="($section == 'contact-us' and $action == 'service') ? 'active' : false"
-							href="url_Make('service', 'contact-us')"
-							cms:eval="href"
-							cms:optional="class"
-							>
-							<cms:text constant="menu_service_contact"/>
-						</a>
-					</li>
-					<li>
-						<a
-							class="($section == 'contact-us' and $action == 'installation') ? 'active' : false"
-							href="url_Make('installation', 'contact-us')"
-							cms:eval="href"
-							cms:optional="class"
-							>
-							<cms:text constant="menu_installation_contact"/>
-						</a>
-					</li>
-				</ul>
-			</cms:user>
 		</li>
 		<cms:guest>
 			<li>

@@ -7,7 +7,7 @@
 			<title>
 				<cms:text constant="site_title"/>
 				<cms:raw text=" - "/>
-				<cms:text constant="menu_installation_contact"/>
+				<cms:text constant="title_user_account"/>
 			</title>
 
 			<link href='//fonts.googleapis.com/css?family=Ubuntu|Ultra' rel='stylesheet' type='text/css'/>
@@ -17,6 +17,15 @@
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<!-- Header -->
 			<cms:template file="parts/header.xml"/>
+
+			<div id="user-service">
+				<h2><cms:text constant="title_user_service"/></h2>
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="service_contact"
+					/>
+			</div>
 
 			<div id="user-installation">
 				<h2><cms:text constant="title_user_installation"/></h2>
