@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<a class="language" href="$params['url']" cms:eval="href">
+		<cms:var param="long_name"/>
+		<svg>
+			<use
+				href="#icon-language"
+				xlink:href="site/images/site-sprite.svg#icon-language"
+				/>
+		</svg>
+	</a>
+</document>

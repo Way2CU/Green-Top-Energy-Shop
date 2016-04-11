@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<li
+		class="$language == $params['short_name'] ? 'active' : false"
+		cms:optional="class"
+		>
+		<a href="$params['url']" cms:eval="href">
+			<cms:var param="long_name"/>
+		</a>
+	</li>
+</document>

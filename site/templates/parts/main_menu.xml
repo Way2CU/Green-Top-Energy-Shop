@@ -14,7 +14,7 @@
 					name="shop"
 					action="show_item_list"
 					category="packages"
-					template="parts/shop_item_links.xml"		
+					template="parts/shop_item_links.xml"
 					/>
 			</ul>
 		</li>
@@ -75,9 +75,12 @@
 				<cms:text constant="menu_contact_us"/>
 			</a>
 		</li>
+
+		<!-- Guest menu -->
 		<cms:guest>
 			<li>
-				<a class="sign-up" href="#"><cms:text constant="menu_signup"/>
+				<a class="sign-up" href="#">
+					<cms:text constant="menu_signup"/>
 					<svg>
 						<use
 							href="#icon-key"
@@ -87,7 +90,8 @@
 				</a>
 			</li>
 			<li>
-				<a class="login" href="#"><cms:text constant="menu_login"/>
+				<a class="login" href="#">
+					<cms:text constant="menu_login"/>
 					<svg>
 						<use
 							href="#icon-system"
@@ -98,6 +102,7 @@
 			</li>
 		</cms:guest>
 
+		<!-- User menu -->
 		<cms:user>
 			<li>
 				<a
@@ -109,7 +114,8 @@
 				</a>
 			</li>
 			<li>
-				<a class="logout" href="#"><cms:text constant="menu_logout"/>
+				<a class="logout" href="#">
+					<cms:text constant="menu_logout"/>
 					<svg>
 						<use
 							href="#icon-system"
@@ -119,5 +125,21 @@
 				</a>
 			</li>
 		</cms:user>
+
+		<!-- Language menu -->
+		<li>
+			<cms:module
+				name="language_menu"
+				action="print_current"
+				template="parts/current_language.xml"
+				/>
+			<ul>
+				<cms:module
+					name="language_menu"
+					action="print"
+					template="parts/language.xml"
+					/>
+			</ul>
+		</li>
 	</ul>
 </document>
