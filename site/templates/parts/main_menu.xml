@@ -104,7 +104,7 @@
 
 		<!-- User menu -->
 		<cms:user>
-			<li>
+			<li cms:skip_cache="1">
 				<a
 					class="control_panel"
 					href="url_Make('', 'user')"
