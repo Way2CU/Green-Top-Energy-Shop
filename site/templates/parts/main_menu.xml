@@ -1,5 +1,5 @@
 <document>
-	<ul>
+	<ul cms:skip_cache="1" cms:flush="1">
 		<li>
 			<a
 				class="$section == 'packages' ? 'active' : false"
@@ -104,7 +104,7 @@
 
 		<!-- User menu -->
 		<cms:user>
-			<li cms:skip_cache="1">
+			<li>
 				<a
 					class="control_panel"
 					href="url_Make('', 'user')"
