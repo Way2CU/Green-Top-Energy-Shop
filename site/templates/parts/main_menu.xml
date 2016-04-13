@@ -1,5 +1,5 @@
 <document>
-	<ul cms:skip_cache="1" cms:flush="1">
+	<ul cms:skip_cache="1">
 		<li>
 			<a
 				class="$section == 'packages' ? 'active' : false"
