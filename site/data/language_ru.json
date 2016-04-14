@@ -30,7 +30,7 @@
     "title_package_system": "Типичные покупатели/сценарии применения одиночных систем:",
     "title_features": "Дополнительные опции при покупке пакета ",
     "title_package_features": "Что входит в пакет",
-    "title_video": "Простой и красивый",
+    "title_video": "eGauge simple and efficien",
     "title_egauge": "A title about eGauge",
     "title_about": "О нас",
     "title_related_products": "Сопутствующие товары",
@@ -40,7 +40,7 @@
     "title_articles_menu": "Предыдущие должности",
     "title_password_recovery": "Восстановление пароля",
     "title_user_service": "техническое обслуживание",
-    "title_user_installation": "Регистрация",
+    "title_user_installation": "Installation contact:",
     "title_user_account": "учетная запись пользователя",
     "label_total": "Выбранные варианты:",
     "label_agree_to_terms": "Я согласен с Условиями использования.",
@@ -60,5 +60,6 @@
     "recovery_dialog_title": "Восстановление пароля",
     "sign_up": "Регистрация",
     "signup_dialog_message": "Пожалуйста, введите свои данные ниже. Эта информация будет использоваться для зарядки и доставки целей поэтому убедитесь, что данные правильно!",
-    "signup_dialog_title": "Регистрация"
+    "signup_dialog_title": "Регистрация",
+    "currency": "€"
 }

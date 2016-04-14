@@ -30,7 +30,7 @@
     "title_package_system": "Typerende klanten/gebruik-scenario's voor één systeem:",
     "title_features": "Aanvullende opties bij de aanschaf van dit pakket",
     "title_package_features": "Wat het pakket bevat",
-    "title_video": "Eenvoudig en toch mooi",
+    "title_video": "eGauge simple and efficien",
     "title_egauge": "A title about eGauge",
     "title_about": "Over ons",
     "title_related_products": "Gerelateerde producten",
@@ -40,7 +40,7 @@
     "title_articles_menu": "Eerdere berichten",
     "title_password_recovery": "Wachtwoord herstel",
     "title_user_service": "Service contracten",
-    "title_user_installation": "Installation contracten",
+    "title_user_installation": "Installation contact:",
     "title_user_account": "Gebruikers account",
     "label_total": "Geselecteerde opties:",
     "label_agree_to_terms": "Ik ga akkoord met de voorwaarden.",
@@ -60,5 +60,6 @@
     "recovery_dialog_title": "Wachtwoord herstel",
     "sign_up": "Registreren",
     "signup_dialog_message": "Vul hieronder uw gegevens in. Deze informatie zal worden gebruikt voor het opladen en het verschepen doeleinden dus zorg ervoor dat data is correct!",
-    "signup_dialog_title": "Registreren"
+    "signup_dialog_title": "Registreren",
+    "currency": "€"
 }

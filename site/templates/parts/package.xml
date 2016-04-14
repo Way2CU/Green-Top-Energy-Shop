@@ -2,10 +2,14 @@
 	<section id="package_details" class="$params['uid']" cms:eval="class">
 		<cms:markdown param="description" multilanguage="yes"/>
 
-		<div class="price" data-currency="shop::getDefaultCurrency()" cms:eval="data-currency">
+		<div
+			class="price"
+			data-currency="currency"
+			cms:constant="data-currency"
+			>
 			<cms:var param="price" />
 		</div>
-		
+
 		<a
 			href="url_Make('checkout', 'shop', array('package', $params['uid']))"
 			class="buy"

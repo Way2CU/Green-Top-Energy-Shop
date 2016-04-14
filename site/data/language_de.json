@@ -30,7 +30,7 @@
     "title_package_system": "Typische Kunden / Benutzerszenarien für ein Einzelsystem:",
     "title_features": "Zusätzliche Optionen beim Erwerb dieses Paketes",
     "title_package_features": "Was das Paket enthält",
-    "title_video": "Einfach und doch schön",
+    "title_video": "eGauge simple and efficien",
     "title_egauge": "A title about eGauge",
     "title_about": "Über uns",
     "title_related_products": "ähnliche Produkte",
@@ -40,7 +40,7 @@
     "title_articles_menu": "vorherige Beiträge",
     "title_password_recovery": "Passwort-Wiederherstellung",
     "title_user_service": "Dienstleistungsverträge:",
-    "title_user_installation": "Installation Kontakt",
+    "title_user_installation": "Installation contact:",
     "title_user_account": "Benutzerkonto",
     "label_total": "Ausgewählte Optionen:",
     "label_agree_to_terms": "Ich stimme den AGB zu",
@@ -60,5 +60,6 @@
     "recovery_dialog_title": "Passwort-Wiederherstellung",
     "sign_up": "Anmelden",
     "signup_dialog_message": "Please enter your details below. This information is for loading and shipping purposes, so make sure that data is used is correct!",
-    "signup_dialog_title": "Anmelden"
+    "signup_dialog_title": "Anmelden",
+    "currency": "€"
 }
