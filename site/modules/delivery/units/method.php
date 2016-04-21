@@ -93,7 +93,9 @@ class Free_DeliveryMethod extends DeliveryMethod {
 	 * @return array
 	 */
 	public function getDeliveryTypes($items, $shipper, $recipient, $transaction=null) {
-		return array();
+		return array(
+				'free' => array('Free', 0, 'EUR', false, false)
+			);
 	}
 
 	/**
