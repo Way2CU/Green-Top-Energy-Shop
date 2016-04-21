@@ -89,11 +89,10 @@ class Free_DeliveryMethod extends DeliveryMethod {
 	 * @param array $items
 	 * @param array $shipper
 	 * @param array $recipient
-	 * @param string $transaction_id
-	 * @param string $preferred_currency
+	 * @param string $transaction
 	 * @return array
 	 */
-	public function getDeliveryTypes($items, $shipper, $recipient, $transaction_id, $preferred_currency) {
+	public function getDeliveryTypes($items, $shipper, $recipient, $transaction=null) {
 		return array();
 	}
 
@@ -149,12 +148,54 @@ class Free_DeliveryMethod extends DeliveryMethod {
 	}
 
 	/**
+	 * Get custom delivery method interface.
+	 *
+	 * @return string
+	 */
+	public function getInterface() {
+		return '';
+	}
+
+	/**
+	 * Get delivery price for selection for specified recipient.
+	 *
+	 * @param array $items
+	 * @param array $shipper
+	 * @param array $recipient
+	 * @param string $selection
+	 * @param object $transaction
+	 * @return float
+	 */
+	public function getCustomEstimate($items, $shipper, $recipient, $selection, $transaction=null) {
+		return 0;
+	}
+
+	/**
 	 * Whether delivery method can be used for international deliveries.
 	 *
 	 * @return boolean
 	 */
 	public function isInternational() {
 		return false;
+	}
+
+	/**
+	 * Whether delivery method provides custom interface. If custom interface is
+	 * present instead of `getDeliveryTypes` function `getInterface` will be called.
+	 *
+	 * @return boolean
+	 */
+	public function hasCustomInterface() {
+		return false;
+	}
+
+	/**
+	 * Return boolean value denoting if system should ask user for delivery address.
+	 *
+	 * @return boolean
+	 */
+	public function requiresUserInformation() {
+		return true;
 	}
 }
 
