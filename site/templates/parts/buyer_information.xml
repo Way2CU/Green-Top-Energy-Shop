@@ -397,10 +397,19 @@
 												autocomplete="on"
 												>
 												<option/>
-												<cms:module
-													name="country_list"
-													action="show"
-													/>
+												<option value="DE">Germany</option>
+												<option value="ES">Spain</option>
+												<option value="IT">Italy</option>
+												<option value="CZ">Czech republic</option>
+												<option value="UA">Ukraine</option>
+												<option value="RU">Russia</option>
+												<option value="FR">France</option>
+												<option value="NL">Netherlands</option>
+												<option value="SE">Sweden</option>
+												<option value="UK">United kingdom</option>
+												<option value="AT">Austria</option>
+												<option value="CH">Switzerland</option>
+												<option value="BE">Belgium</option>
 											</select>
 										</cms:if>
 										<cms:if condition="!empty($params['fixed_country'])">
