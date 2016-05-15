@@ -94,3 +94,39 @@ footer div.copyright {
 footer div.copyright a {
 	color: white;
 }
+
+/**
+ * tracking message
+ */
+
+div#tracking_message {
+	position: fixed;
+	z-index: 100000;
+	bottom: 0px;
+	right: 0;
+	left: 0;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: black;
+	color: white;
+	font-weight: 700;
+	text-align: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+}
+
+div#tracking_message.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+div#tracking_message a {
+	color: white;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+div#tracking_message a:hover {
+	text-decoration: none;
+}
