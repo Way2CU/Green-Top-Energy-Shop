@@ -63,5 +63,5 @@
 	"signup_dialog_message": "Please enter your details below. This information will be used for charging and shipping purposes so make sure data is correct!",
 	"signup_dialog_title": "Sign up",
 	"currency": "€",
-	"tracking_message": "A message about cookie tracking information should come here!"
+	"cookie_warning": "A message about cookie tracking information should come here!"
 }

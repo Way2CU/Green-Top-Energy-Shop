@@ -893,15 +893,14 @@ Site.on_load = function() {
 	$('div.package a.buy').on('click', Site.handle_checkout_click);
 
 	// display warning tracking message if first time user entered site
-	var message = $('div#tracking_message');
-	if(!window.localStorage.getItem('visited')) {
-		window.localStorage.setItem('visited','visited');
-		message.addClass('show');
-	}
+	var message = $('div#cookie-warning');
+	if(!window.localStorage.getItem('cookie-warning'))
+		message.addClass('visible');
 
 	message.find('a').on('click', function() {
-		message.removeClass('show');
-	})
+		window.localStorage.setItem('cookie-warning', true);
+		message.removeClass('visible');
+	});
 };
 
 

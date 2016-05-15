@@ -37,8 +37,8 @@
 		</div>
 
 		<!-- Container for tracking cookie message -->
-		<div id="tracking_message">
-			<cms:text constant="tracking_message"/>
+		<div id="cookie-warning">
+			<cms:text constant="cookie_warning"/>
 			<a href="javascript:void(0)">
 				<cms:text constant="label_close"/>
 			</a>
