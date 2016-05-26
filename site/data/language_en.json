@@ -53,6 +53,7 @@
 	"label_remember_me":"Remember me",
 	"label_repeat_password": "Repeat password",
 	"label_regular": "Regular",
+	"label_close": "Close",
 	"login": "Login",
 	"login_dialog_message": "Please enter your user name and password below. Password is case sensitive.",
 	"login_dialog_title": "Login",
@@ -61,5 +62,6 @@
 	"sign_up": "Sign up",
 	"signup_dialog_message": "Please enter your details below. This information will be used for charging and shipping purposes so make sure data is correct!",
 	"signup_dialog_title": "Sign up",
-	"currency": "€"
+	"currency": "€",
+	"tracking_message": "A message about cookie tracking information should come here!"
 }
