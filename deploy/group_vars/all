@@ -2,7 +2,7 @@
 site:
   domain: greentopsenergy.com
   # subdomain: test
-  make_alias: false
+  # alias: domain.com
   root: httpdocs
   username: green_top
   caracal_branch: develop

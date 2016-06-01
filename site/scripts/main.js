@@ -887,6 +887,7 @@ Site.on_load = function() {
 	Site.package_slider
 		.setInterval(5000)
 		.setWrapAround(true)
+		.setPauseOnHover(true)
 		.attachControls('section#packages div.controls a');
 
 	// connect checkout buttons

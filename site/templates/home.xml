@@ -43,6 +43,17 @@
 				<div class="controls"/>
 			</section>
 
+			<cms:desktop>
+				<section id="package_list">
+					<cms:module
+						name="shop"
+						action="show_item_list"
+						category="packages"
+						template="parts/package_item.xml"
+						/>
+				</section>
+			</cms:desktop>
+
 			<!-- Egauge -->
 			<section id="egauge">
 				<cms:module

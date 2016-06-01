@@ -79,24 +79,28 @@ section#packages div.package.manual_slider {
 }
 
 section#package_details.basic,
+section#package_list div.package.basic,
 section#packages div.package.basic {
 	background-color: @color_ac_blue;
 	background-image: url(../images/slides/basic.jpg);
 }
 
 section#package_details.renewable,
+section#package_list div.package.renewable,
 section#packages div.package.renewable {
 	background-color: @color_ac_green;
 	background-image: url(../images/slides/renewable-energy.jpg);
 }
 
 section#package_details.business,
+section#package_list div.package.business,
 section#packages div.package.business {
 	background-color: @color_ac_red;
 	background-image: url(../images/slides/small-business.jpg);
 }
 
 section#package_details.industry,
+section#package_list div.package.industry,
 section#packages div.package.industry {
 	background-color: @color_ac_orange;
 	background-image: url(../images/slides/business-light-industrial.jpg);
@@ -343,6 +347,118 @@ section#package_details.industry article {
 	section#package_details.industry article {
 		background-image: none;
 	}
+}
+
+/**
+ * Home page package list
+ */
+section#package_list {
+	padding: @vertical_spacing calc(~'(100% - 1200px) / 2');
+}
+
+section#package_list div.package {
+	display: inline-block;
+	vertical-align: top;
+	width: 250px;
+	margin-right: 10px;
+	padding: 10px;
+	padding-top: 190px;
+
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 270px auto;
+
+	color: @color_ac_text;
+	text-align: center;
+}
+
+section#package_list div.package:last-of-type {
+	margin-right: 0px;
+}
+
+section#package_list div.package.basic {
+	background-color: @color_ac_blue;
+}
+
+section#package_list div.package.renewable {
+	background-color: @color_ac_green;
+}
+
+section#package_list div.package.business {
+	background-color: @color_ac_red;
+}
+
+section#package_list div.package.industrial {
+	background-color: @color_ac_orange;
+}
+
+section#package_list h2 {
+	min-height: 4em;
+
+	margin: 0px;
+	padding: 0px;
+
+	color: @color_ac_text;
+	font-size: 1em;
+}
+
+section#package_list a.buy {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+	padding-bottom: 0.8em;
+
+	border-radius: @button_border_radius;
+	border: 1px solid @color_ac_text;
+
+	color: @color_ac_text;
+	font-weight: 700;
+	line-height: 100%;
+	text-decoration: none;
+
+	transition: all 0.3s;
+}
+
+section#package_list a.buy:hover {
+	background-color: @color_ac_text;
+}
+
+section#package_list div.package.basic a.buy:hover {
+	color: @color_ac_blue;
+}
+
+section#package_list div.package.renewable a.buy:hover {
+	color: @color_ac_green;
+}
+
+section#package_list div.package.business a.buy:hover {
+	color: @color_ac_red;
+}
+
+section#package_list div.package.industry a.buy:hover {
+	color: @color_ac_orange;
+}
+
+section#package_list a.buy svg {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 1.5em;
+	height: 1.5em;
+	fill: currentColor;
+	margin-top: -0.3em;
+}
+
+section#package_list div.price {
+	font-weight: 700;
+}
+
+section#package_list div.price:after {
+	content: attr(data-currency);
+	display: inline-block;
+	padding-left: 0.2em;
 }
 
 /**
