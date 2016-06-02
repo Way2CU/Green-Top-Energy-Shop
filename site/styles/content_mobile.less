@@ -108,7 +108,6 @@ section#packages div.package.business {
 	background-image: url(../images/slides/small-business.jpg);
 }
 
-section#package_details.industry,
 section#packages div.package.industry {
 	background-color: @color_ac_orange;
 	background-image: url(../images/slides/business-light-industrial.jpg);
@@ -1168,4 +1167,89 @@ section#blog-content article span.author {
 section#unique-post article img,
 section#blog-content article img {
 	display: block;
+}
+
+/**
+ * Home page package list
+ */
+section#package_list {
+	display: block;
+}
+
+section#package_list div.package {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(~'(50% - 10px)');
+	padding: 5px;
+	padding-top: 40px;
+
+	color: @color_ac_text;
+	text-align: center;
+	position: relative;
+	min-height: 370px;
+}
+
+section#package_list div.package.basic {
+	background-color: @color_ac_blue;
+}
+
+section#package_list div.package.renewable {
+	background-color: @color_ac_green;
+}
+
+section#package_list div.package.business {
+	background-color: @color_ac_red;
+}
+
+section#package_list div.package.industry {
+	background-color: @color_ac_orange;
+}
+
+section#package_list h2 {
+	min-height: 4em;
+
+	margin: 0px;
+	padding: 0px;
+
+	color: @color_ac_text;
+	font-size: 1em;
+}
+
+section#package_list a.buy {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	padding: 1em;
+	padding-bottom: 0.8em;
+
+	border-radius: @button_border_radius;
+	border: 1px solid @color_ac_text;
+
+	color: @color_ac_text;
+	font-weight: 700;
+	line-height: 100%;
+	text-decoration: none;
+
+	transition: all 0.3s;
+}
+
+section#package_list a.buy svg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	width: 1.5em;
+	height: 1.5em;
+	fill: currentColor;
+}
+
+section#package_list div.price {
+	font-weight: 700;
+}
+
+section#package_list div.price:after {
+	content: attr(data-currency);
+	display: inline-block;
+	padding-left: 0.2em;
 }
